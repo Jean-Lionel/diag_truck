@@ -91,7 +91,7 @@
             <div class="col">
                 <nav class="navbar navbar-light bg-secondary rounded">
                     <div>
-                        <h5> Association</h5>
+                        <h5> DIAGTRACK</h5>
                     </div>
                 </nav>
 
