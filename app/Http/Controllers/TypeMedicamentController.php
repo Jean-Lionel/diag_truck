@@ -11,47 +11,46 @@ use Illuminate\View\View;
 
 class TypeMedicamentController extends Controller
 {
-    public function index(Request $request): Response
+    public function index(Request $request)
     {
         $typeMedicaments = TypeMedicament::all();
 
         return view('typeMedicament.index', compact('typeMedicaments'));
     }
 
-    public function create(Request $request): Response
+    public function create(Request $request)
     {
         return view('typeMedicament.create');
     }
 
-    public function store(TypeMedicamentStoreRequest $request): Response
+    public function store(TypeMedicamentStoreRequest $request)
     {
         $typeMedicament = TypeMedicament::create($request->validated());
-
-        $request->session()->flash('typeMedicament.id', $typeMedicament->id);
+        session()->flash('typeMedicament.id', $typeMedicament->id);
 
         return redirect()->route('typeMedicament.index');
     }
 
-    public function show(Request $request, TypeMedicament $typeMedicament): Response
+    public function show(Request $request, TypeMedicament $typeMedicament)
     {
         return view('typeMedicament.show', compact('typeMedicament'));
     }
 
-    public function edit(Request $request, TypeMedicament $typeMedicament): Response
+    public function edit(Request $request, TypeMedicament $typeMedicament)
     {
         return view('typeMedicament.edit', compact('typeMedicament'));
     }
 
-    public function update(TypeMedicamentUpdateRequest $request, TypeMedicament $typeMedicament): Response
+    public function update(TypeMedicamentUpdateRequest $request, TypeMedicament $typeMedicament)
     {
         $typeMedicament->update($request->validated());
 
-        $request->session()->flash('typeMedicament.id', $typeMedicament->id);
+        session()->flash('typeMedicament.id', $typeMedicament->id);
 
         return redirect()->route('typeMedicament.index');
     }
 
-    public function destroy(Request $request, TypeMedicament $typeMedicament): Response
+    public function destroy(Request $request, TypeMedicament $typeMedicament)
     {
         $typeMedicament->delete();
 
