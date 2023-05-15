@@ -1,0 +1,17 @@
+
+models:
+  Patient:
+   first_name: string 255
+   last_name: string 255
+   birthday: datetime
+   patient_id: string
+   address: string nullable
+   phone: string nullable
+   chef_famille: string nullable
+
+
+seeders: Patient
+
+controllers:
+  Patient:
+   resource: web
