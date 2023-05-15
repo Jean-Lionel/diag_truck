@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    patient.show template
+    member.show template
 @endsection

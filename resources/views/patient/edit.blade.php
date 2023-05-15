@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    patient.edit template
+    <form action="{{ route('patient.update', $member) }}" method="post">
+        @method('PUT')
+
+        @include('patient.form', [
+            'title' => 'Modification ',
+            'isUpdate' => true,
+        ])
+    </form>
 @endsection

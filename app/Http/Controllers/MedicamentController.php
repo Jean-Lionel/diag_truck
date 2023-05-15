@@ -11,47 +11,47 @@ use Illuminate\View\View;
 
 class MedicamentController extends Controller
 {
-    public function index(Request $request): Response
+    public function index(Request $request)
     {
         $medicaments = Medicament::all();
 
         return view('medicament.index', compact('medicaments'));
     }
 
-    public function create(Request $request): Response
+    public function create(Request $request)
     {
         return view('medicament.create');
     }
 
-    public function store(MedicamentStoreRequest $request): Response
+    public function store(MedicamentStoreRequest $request)
     {
         $medicament = Medicament::create($request->validated());
 
-        $request->session()->flash('medicament.id', $medicament->id);
+       session()->flash('medicament.id', $medicament->id);
 
         return redirect()->route('medicament.index');
     }
 
-    public function show(Request $request, Medicament $medicament): Response
+    public function show(Request $request, Medicament $medicament)
     {
         return view('medicament.show', compact('medicament'));
     }
 
-    public function edit(Request $request, Medicament $medicament): Response
+    public function edit(Request $request, Medicament $medicament)
     {
         return view('medicament.edit', compact('medicament'));
     }
 
-    public function update(MedicamentUpdateRequest $request, Medicament $medicament): Response
+    public function update(MedicamentUpdateRequest $request, Medicament $medicament)
     {
         $medicament->update($request->validated());
 
-        $request->session()->flash('medicament.id', $medicament->id);
+        session()->flash('medicament.id', $medicament->id);
 
         return redirect()->route('medicament.index');
     }
 
-    public function destroy(Request $request, Medicament $medicament): Response
+    public function destroy(Request $request, Medicament $medicament)
     {
         $medicament->delete();
 
