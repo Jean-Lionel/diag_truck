@@ -23,3 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('patient', App\Http\Controllers\PatientController::class);
+
+
+Route::resource('service', App\Http\Controllers\ServiceController::class);

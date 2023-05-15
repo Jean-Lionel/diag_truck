@@ -1,17 +1,13 @@
 
 models:
-  Patient:
-   first_name: string 255
-   last_name: string 255
-   birthday: datetime
-   patient_id: string
-   address: string nullable
-   phone: string nullable
-   chef_famille: string nullable
+  Service:
+   name: string nullable
+   status: boolean default true
+   description: longtext nullable
 
 
-seeders: Patient
+seeders: Service
 
 controllers:
-  Patient:
+  Service:
    resource: web

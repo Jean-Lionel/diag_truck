@@ -1,17 +1,18 @@
 created:
-    - app/Http/Controllers/PatientController.php
-    - database/factories/PatientFactory.php
-    - database/migrations/2023_05_15_061046_create_patients_table.php
-    - app/Models/Patient.php
-    - database/seeders/PatientSeeder.php
-    - tests/Feature/Http/Controllers/PatientControllerTest.php
-    - app/Http/Requests/PatientStoreRequest.php
-    - app/Http/Requests/PatientUpdateRequest.php
-    - resources/views/patient/index.blade.php
-    - resources/views/patient/create.blade.php
-    - resources/views/patient/show.blade.php
-    - resources/views/patient/edit.blade.php
+    - app/Http/Controllers/ServiceController.php
+    - database/factories/ServiceFactory.php
+    - database/migrations/2023_05_15_061621_create_services_table.php
+    - app/Models/Service.php
+    - database/seeders/ServiceSeeder.php
+    - tests/Feature/Http/Controllers/ServiceControllerTest.php
+    - app/Http/Requests/ServiceStoreRequest.php
+    - app/Http/Requests/ServiceUpdateRequest.php
+    - resources/views/service/index.blade.php
+    - resources/views/service/create.blade.php
+    - resources/views/service/show.blade.php
+    - resources/views/service/edit.blade.php
 updated:
     - routes/web.php
 models:
     Patient: { first_name: 'string 255', last_name: 'string 255', birthday: datetime, patient_id: string, address: 'string nullable', phone: 'string nullable', chef_famille: 'string nullable' }
+    Service: { name: 'string nullable' }
