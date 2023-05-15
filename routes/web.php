@@ -26,3 +26,8 @@ Route::resource('patient', App\Http\Controllers\PatientController::class);
 
 
 Route::resource('service', App\Http\Controllers\ServiceController::class);
+
+
+Route::resource('type-medicament', App\Http\Controllers\TypeMedicamentController::class);
+
+Route::resource('medicament', App\Http\Controllers\MedicamentController::class);

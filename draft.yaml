@@ -1,13 +1,18 @@
 
 models:
-  Service:
+  TypeMedicament:
+    name: string
+
+  Medicament:
    name: string nullable
-   status: boolean default true
    description: longtext nullable
+   type_medicament_id : id foreign:TypeMedicament
 
 
-seeders: Service
+seeders: TypeMedicament,Medicament
 
 controllers:
-  Service:
+  TypeMedicament:
+   resource: web
+  Medicament:
    resource: web

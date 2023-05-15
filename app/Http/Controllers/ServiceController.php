@@ -11,47 +11,47 @@ use Illuminate\View\View;
 
 class ServiceController extends Controller
 {
-    public function index(Request $request): Response
+    public function index(Request $request)
     {
         $services = Service::all();
 
         return view('service.index', compact('services'));
     }
 
-    public function create(Request $request): Response
+    public function create(Request $request)
     {
         return view('service.create');
     }
 
-    public function store(ServiceStoreRequest $request): Response
+    public function store(ServiceStoreRequest $request)
     {
         $service = Service::create($request->validated());
 
-        $request->session()->flash('service.id', $service->id);
+       session()->flash('service.id', $service->id);
 
         return redirect()->route('service.index');
     }
 
-    public function show(Request $request, Service $service): Response
+    public function show(Request $request, Service $service)
     {
         return view('service.show', compact('service'));
     }
 
-    public function edit(Request $request, Service $service): Response
+    public function edit(Request $request, Service $service)
     {
         return view('service.edit', compact('service'));
     }
 
-    public function update(ServiceUpdateRequest $request, Service $service): Response
+    public function update(ServiceUpdateRequest $request, Service $service)
     {
         $service->update($request->validated());
 
-        $request->session()->flash('service.id', $service->id);
+        session()->flash('service.id', $service->id);
 
         return redirect()->route('service.index');
     }
 
-    public function destroy(Request $request, Service $service): Response
+    public function destroy(Request $request, Service $service)
     {
         $service->delete();
 

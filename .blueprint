@@ -1,18 +1,32 @@
 created:
-    - app/Http/Controllers/ServiceController.php
-    - database/factories/ServiceFactory.php
-    - database/migrations/2023_05_15_061621_create_services_table.php
-    - app/Models/Service.php
-    - database/seeders/ServiceSeeder.php
-    - tests/Feature/Http/Controllers/ServiceControllerTest.php
-    - app/Http/Requests/ServiceStoreRequest.php
-    - app/Http/Requests/ServiceUpdateRequest.php
-    - resources/views/service/index.blade.php
-    - resources/views/service/create.blade.php
-    - resources/views/service/show.blade.php
-    - resources/views/service/edit.blade.php
+    - app/Http/Controllers/TypeMedicamentController.php
+    - app/Http/Controllers/MedicamentController.php
+    - database/factories/TypeMedicamentFactory.php
+    - database/factories/MedicamentFactory.php
+    - database/migrations/2023_05_15_062521_create_type_medicaments_table.php
+    - database/migrations/2023_05_15_062522_create_medicaments_table.php
+    - app/Models/TypeMedicament.php
+    - app/Models/Medicament.php
+    - database/seeders/TypeMedicamentSeeder.php
+    - database/seeders/MedicamentSeeder.php
+    - tests/Feature/Http/Controllers/TypeMedicamentControllerTest.php
+    - tests/Feature/Http/Controllers/MedicamentControllerTest.php
+    - app/Http/Requests/TypeMedicamentStoreRequest.php
+    - app/Http/Requests/TypeMedicamentUpdateRequest.php
+    - app/Http/Requests/MedicamentStoreRequest.php
+    - app/Http/Requests/MedicamentUpdateRequest.php
+    - resources/views/typeMedicament/index.blade.php
+    - resources/views/typeMedicament/create.blade.php
+    - resources/views/typeMedicament/show.blade.php
+    - resources/views/typeMedicament/edit.blade.php
+    - resources/views/medicament/index.blade.php
+    - resources/views/medicament/create.blade.php
+    - resources/views/medicament/show.blade.php
+    - resources/views/medicament/edit.blade.php
 updated:
     - routes/web.php
 models:
     Patient: { first_name: 'string 255', last_name: 'string 255', birthday: datetime, patient_id: string, address: 'string nullable', phone: 'string nullable', chef_famille: 'string nullable' }
     Service: { name: 'string nullable' }
+    TypeMedicament: { name: string }
+    Medicament: { name: 'string nullable', description: 'longtext nullable', type_medicament_id: 'id foreign:TypeMedicament' }
