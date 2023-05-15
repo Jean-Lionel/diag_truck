@@ -1,7 +1,5 @@
-{{--
-    @extends('layouts.app')
+@extends('layouts.app')
 
-    @section('content')
-        patient.index template
-    @endsection
---}}
+@section('content')
+    patient.index template
+@endsection

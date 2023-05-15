@@ -43,66 +43,19 @@
                         </li>
 
                         <li>
-                            <a href="{{ route('dashboard') }}" class="nav-link px-0 align-middle">
+                            <a href="" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-speedometer2"></i>
                                 <span class="ms-1 d-none d-sm-inline">Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('cotisation.create') }}" class="nav-link px-0 align-middle">
-
+                            <a href="{{ route('patient.index') }}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-cash-coin"></i>
-                                <span class="ms-1 d-none d-sm-inline">Cotisation</span></a>
-                        </li>
-                        <li>
-                            <a href="{{ route('credit.create') }}" class="nav-link px-0 align-middle">
-                                <i class="fs-4  bi-currency-exchange"></i>
-                                <span class="ms-1 d-none d-sm-inline">Crédit</span></a>
-                        </li>
-                        <li>
-                            <a href="{{ route('team.index') }}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-collection-fill"></i>
-                                <span class="ms-1 d-none d-sm-inline">Groupe</span></a>
-                        </li>
-                        <li>
-                            <a href="{{ route('member.index') }}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i>
-                                <span class="ms-1 d-none d-sm-inline">Membres</span></a>
-                        </li>
-                        <li>
-                            <a href="{{ route('typeCotisation.index') }}" class="nav-link px-0 align-middle">
-
-                                <i class="fs-4 bi-wallet2"></i>
-                                <span class="ms-1 d-none d-sm-inline">Type de cotisation</span></a>
-                        </li>
-
-                        <li>
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="#" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">Product</span> 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">Product</span> 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">Product</span> 3</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline">Product</span> 4</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span>
+                                <span class="ms-1 d-none d-sm-inline">Patient</span>
                             </a>
                         </li>
+
+
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
@@ -127,8 +80,7 @@
                                     {{ __('Logout') }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </li>
