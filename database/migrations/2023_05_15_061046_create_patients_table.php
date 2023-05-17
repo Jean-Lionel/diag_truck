@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('birthday');
             $table->string('patient_id');
             $table->string('address')->nullable();
+            $table->string('sexe')->nullable();
             $table->string('phone')->nullable();
             $table->string('chef_famille')->nullable();
             $table->timestamps();

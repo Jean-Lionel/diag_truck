@@ -33,4 +33,8 @@ class Patient extends Model
         'id' => 'integer',
         'birthday' => 'datetime',
     ];
+
+    public function getPatientIdAttribute(){
+        return "A" .str_pad($this->id,5,"0",STR_PAD_LEFT);
+    }
 }

@@ -1,18 +1,24 @@
 
+
 models:
-  TypeMedicament:
-    name: string
+  Diagnostic:
+    patient_id: id foreign:Patient
+    docteur_id: id foreign:User
+    contenu : string
+    date_diag: dateTime
+  Prescription:
+    diag_id : id foreign:Diagnostic
+    med_id : id foreign:Medicament
+    dose: string
 
-  Medicament:
-   name: string nullable
-   description: longtext nullable
-   type_medicament_id : id foreign:TypeMedicament
-
-
-seeders: TypeMedicament,Medicament
+seeders: Diagnostic,Prescription
 
 controllers:
-  TypeMedicament:
-   resource: web
-  Medicament:
-   resource: web
+  Diagnostic:
+    resource: web
+
+  Prescription:
+    resource: web
+
+  Role:
+    resource: web
