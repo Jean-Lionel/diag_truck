@@ -20,11 +20,13 @@ class PatientController extends Controller
 
     public function create(Request $request)
     {
-        return view('patient.create');
+        $patient = new Patient;
+        return view('patient.create', compact('patient'));
     }
 
     public function store(PatientStoreRequest $request)
     {
+        dd('hhiiiii');
         $patient = Patient::create($request->validated());
 
        session()->flash('patient.id', $patient->id);
@@ -44,6 +46,7 @@ class PatientController extends Controller
 
     public function update(PatientUpdateRequest $request, Patient $patient)
     {
+
         $patient->update($request->validated());
 
         session()->flash('patient.id', $patient->id);
