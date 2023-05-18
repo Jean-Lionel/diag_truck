@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.dashboard');
 });
 
 Auth::routes();
@@ -31,3 +31,16 @@ Route::resource('service', App\Http\Controllers\ServiceController::class);
 Route::resource('type-medicament', App\Http\Controllers\TypeMedicamentController::class);
 
 Route::resource('medicament', App\Http\Controllers\MedicamentController::class);
+
+
+Route::resource('assignation', App\Http\Controllers\AssignationController::class);
+
+
+Route::resource('diagnostic', App\Http\Controllers\DiagnosticController::class);
+
+Route::resource('prescription', App\Http\Controllers\PrescriptionController::class);
+
+Route::resource('role', App\Http\Controllers\RoleController::class);
+
+
+Route::resource('user', App\Http\Controllers\UserController::class);

@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Patient extends Model
+class Prescription extends Model
 {
     use HasFactory;
 
@@ -15,15 +16,9 @@ class Patient extends Model
      * @var array
      */
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'birthday',
-        'patient_id',
-        'address',
-        'sexe',
-        'phone',
-        'chef_famille',
-        'sexe',
+        'diag_id',
+        'med_id',
+        'dose',
     ];
 
     /**
@@ -33,10 +28,17 @@ class Patient extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'birthday' => 'datetime',
+        'diag_id' => 'integer',
+        'med_id' => 'integer',
     ];
 
-    public function getPatientIdAttribute(){
-        return "A" .str_pad($this->id,5,"0",STR_PAD_LEFT);
+    public function diag(): BelongsTo
+    {
+        return $this->belongsTo(Diagnostic::class);
+    }
+
+    public function med(): BelongsTo
+    {
+        return $this->belongsTo(Medicament::class);
     }
 }

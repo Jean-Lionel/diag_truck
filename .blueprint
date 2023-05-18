@@ -1,28 +1,12 @@
 created:
-    - app/Http/Controllers/TypeMedicamentController.php
-    - app/Http/Controllers/MedicamentController.php
-    - database/factories/TypeMedicamentFactory.php
-    - database/factories/MedicamentFactory.php
-    - database/migrations/2023_05_15_062521_create_type_medicaments_table.php
-    - database/migrations/2023_05_15_062522_create_medicaments_table.php
-    - app/Models/TypeMedicament.php
-    - app/Models/Medicament.php
-    - database/seeders/TypeMedicamentSeeder.php
-    - database/seeders/MedicamentSeeder.php
-    - tests/Feature/Http/Controllers/TypeMedicamentControllerTest.php
-    - tests/Feature/Http/Controllers/MedicamentControllerTest.php
-    - app/Http/Requests/TypeMedicamentStoreRequest.php
-    - app/Http/Requests/TypeMedicamentUpdateRequest.php
-    - app/Http/Requests/MedicamentStoreRequest.php
-    - app/Http/Requests/MedicamentUpdateRequest.php
-    - resources/views/typeMedicament/index.blade.php
-    - resources/views/typeMedicament/create.blade.php
-    - resources/views/typeMedicament/show.blade.php
-    - resources/views/typeMedicament/edit.blade.php
-    - resources/views/medicament/index.blade.php
-    - resources/views/medicament/create.blade.php
-    - resources/views/medicament/show.blade.php
-    - resources/views/medicament/edit.blade.php
+    - app/Http/Controllers/UserController.php
+    - tests/Feature/Http/Controllers/UserControllerTest.php
+    - app/Http/Requests/UserStoreRequest.php
+    - app/Http/Requests/UserUpdateRequest.php
+    - resources/views/user/index.blade.php
+    - resources/views/user/create.blade.php
+    - resources/views/user/show.blade.php
+    - resources/views/user/edit.blade.php
 updated:
     - routes/web.php
 models:
@@ -30,3 +14,7 @@ models:
     Service: { name: 'string nullable' }
     TypeMedicament: { name: string }
     Medicament: { name: 'string nullable', description: 'longtext nullable', type_medicament_id: 'id foreign:TypeMedicament' }
+    Assignation: { patient_id: 'id foreign:Patient', infirmier_id: 'id foreign:User', docteur_id: 'id foreign:User', date_assignation: dateTime }
+    Role: { name: string }
+    Diagnostic: { patient_id: 'id foreign:Patient', docteur_id: 'id foreign:User', contenu: string, date_diag: dateTime }
+    Prescription: { diag_id: 'id foreign:Diagnostic', med_id: 'id foreign:Medicament', dose: string }

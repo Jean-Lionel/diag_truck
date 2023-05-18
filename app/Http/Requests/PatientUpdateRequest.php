@@ -25,6 +25,7 @@ class PatientUpdateRequest extends FormRequest
             'birthday' => ['required'],
             'patient_id' => ['required', 'string'],
             'address' => ['nullable', 'string'],
+            'sexe' => ['nullable','string'],
             'phone' => ['nullable', 'string'],
             'chef_famille' => ['nullable', 'string'],
         ];

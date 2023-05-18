@@ -1,4 +1,5 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@extends('layouts.dashboard')
 
 @section('content')
     <div class="card" style="padding: 0;">
@@ -23,13 +24,15 @@
                         </th>
                         <th class="th-sm">Prénom
                         </th>
-                        <th class="th-sm">Sexe
+                        <th class="th-sm">Date de  naissnace
                         </th>
-                        <th class="th-sm">Groupe
+                        <th class="th-sm">Adresse
                         </th>
                         <th class="th-sm">Téléphone
                         </th>
-                        <th class="th-sm">Email
+                        <th class="th-sm">Sexe
+                        </th>
+                        <th class="th-sm">Chef de Famille
                         </th>
                         <th class="th-sm">Action
                         </th>
@@ -43,10 +46,11 @@
                             <td>{{ $item->patientId }}</td>
                             <td>{{ $item->first_name }}</td>
                             <td>{{ $item->last_name }}</td>
-                            <td>{{ $item->sexe }}</td>
-                            <td>452</td>
+                            <td>{{ $item->birthday }}</td>
+                            <td>{{ $item->address }}</td>
                             <td>{{ $item->phone }}</td>
-                            <td>{{ $item->email }}</td>
+                            <td>{{ $item->sexe }}</td>
+                            <td>{{ $item->chef_famille }}</td>
                             <td>
                                 <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Patient extends Model
+class Role extends Model
 {
     use HasFactory;
 
@@ -15,15 +15,7 @@ class Patient extends Model
      * @var array
      */
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'birthday',
-        'patient_id',
-        'address',
-        'sexe',
-        'phone',
-        'chef_famille',
-        'sexe',
+        'name',
     ];
 
     /**
@@ -33,10 +25,5 @@ class Patient extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'birthday' => 'datetime',
     ];
-
-    public function getPatientIdAttribute(){
-        return "A" .str_pad($this->id,5,"0",STR_PAD_LEFT);
-    }
 }
