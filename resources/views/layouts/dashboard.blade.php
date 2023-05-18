@@ -29,7 +29,8 @@
         font-family: Arial, Helvetica, sans-serif;
    }
     .sidebar {
-      width: 200px;
+      /* width: 200px; */
+      min-width: 200px;
       background-color: #f1f1f1;
       height: 100%;
       position: fixed;
@@ -76,9 +77,13 @@
     padding: 14px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     }
     .search input{
-        width: 130px;
+        /* width: 130px; */
+        width: 100%;
+        max-width: 300px;
+
 
     }
     .navbar .logo{
@@ -97,6 +102,20 @@
     .dashboard {
       margin-left: 200px;
       padding: 20px;
+      margin-left: 0;
+      margin-top: 50px;
+      padding: 10px;
+    }
+
+    /* Responsive Style */
+    @media only screen and (max-width: 600px){
+      .sidebar{
+         display: none; /* Hide the sidebar on smaller screens */
+      }
+
+      .dashboard{
+        margin-top: 10px; /* Reduce the top margin for better spacing */
+      }
     }
   </style>
 </head>
