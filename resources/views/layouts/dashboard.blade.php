@@ -133,17 +133,64 @@
   </div>
   
   <div class="sidebar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
+    <div class="dropdown">
+      <a href="#">Patients</a>
+      <div class="dropdown-content">
+        <a href="#">Nouveau Patient</a>
+        <a href="#">Voir Les Patients</a>
+        <a href="#">Gerer Les Patients</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Employés</a>
+      <div class="dropdown-content">
+        <a href="#">Nouveau Employé</a>
+        <a href="#">Voir Les Employé</a>
+        <a href="#">Gerer Les Employé</a>
+        <hr>
+        <a href="#">Assigner Les Services</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Assignations</a>
+      <div class="dropdown-content">
+        <a href="#">Nouvelle Assignations</a>
+        <a href="#">Listes des Assignations</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Diagnostics</a>
+      <div class="dropdown-content">
+        <a href="#">Nouveau Diagnostic</a>
+        <a href="#">Liste Des Diagnostics</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Prescriptions</a>
+      <div class="dropdown-content">
+        <a href="#">Nouvelle Prescription</a>
+        <a href="#">Voir Prescriptions</a>
+        <a href="#">Gerer Prescriptions</a>
+        <hr>
+        <a href="#">Nouveau Medicament</a>
+        <a href="#">Voir Medicament</a>
+        <a href="#">Gerer Medicament</a>
+      </div>
+    </div>
     <div class="dropdown">
       <a href="#">Services</a>
       <div class="dropdown-content">
-        <a href="#">Service 1</a>
-        <a href="#">Service 2</a>
-        <a href="#">Service 3</a>
+        <a href="#">Nouveau Service</a>
+        <a href="#">Voir Service</a>
+        <a href="#">Gerer Service</a>
       </div>
     </div>
-    <a href="#">Contact</a>
+    <div class="dropdown">
+      <a href="#">Dossier Medical</a>
+      <div class="dropdown-content">
+        <a href="#">Gerer Dossier Medical</a>
+      </div>
+    </div>
   </div>
 
  
