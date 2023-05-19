@@ -23,6 +23,7 @@ class Patient extends Model
         'sexe',
         'phone',
         'chef_famille',
+        'sexe',
     ];
 
     /**

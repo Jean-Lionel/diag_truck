@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('fname');
-            $table->string('lname');
-            $table->string('phone');
+            $table->string('name')->nullable();
+            $table->string('lname')->nullable();
+            $table->string('phone')->nullable();
             $table->string('sexe')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('groupe')->nullable();
             $table->string('specialite_Docteur')->nullable();
             $table->string('qualification_infirmier')->nullable();
-            $table->boolean('statut');
-            $table->foreignId('role_id')->constrained('roles');
+            $table->boolean('statut')->nullable();
+          //  $table->foreignId('role_id')->constrained('roles')->nullable();
             $table->timestamps();
         });
     }
