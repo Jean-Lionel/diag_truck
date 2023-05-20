@@ -23,10 +23,9 @@ class PatientStoreRequest extends FormRequest
             'first_name' => ['required', 'string'],
             'last_name' => ['required', 'string'],
             'birthday' => ['required'],
-            'patient_id' => ['required', 'string'],
             'address' => ['nullable', 'string'],
             'phone' => ['nullable', 'string'],
-            'sexe' => ['nullable','string'],
+            'sexe' => ['required','string'],
             'chef_famille' => ['nullable', 'string'],
         ];
     }

@@ -14,9 +14,9 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.bunny.net/css?family=Nunito" defer rel="stylesheet"> 
+    <link href="https://fonts.bunny.net/css?family=Nunito" defer rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" defer> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" defer>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" defer>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -52,6 +52,13 @@
                             <a href="{{ route('patient.index') }}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-cash-coin"></i>
                                 <span class="ms-1 d-none d-sm-inline">Patient</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('user.index') }}" class="nav-link px-0 align-middle">
+
+                                <i class="fs-4 bi-people-fill"></i>
+                                <span class="ms-1 d-none d-sm-inline">Personnel</span>
                             </a>
                         </li>
 

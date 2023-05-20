@@ -26,7 +26,7 @@ class PatientController extends Controller
 
     public function store(PatientStoreRequest $request)
     {
-        dd('hhiiiii');
+
         $patient = Patient::create($request->validated());
 
        session()->flash('patient.id', $patient->id);
