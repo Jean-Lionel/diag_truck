@@ -1,5 +1,5 @@
 {{-- @extends('layouts.app') --}}
-@extends('layouts.dashboard')
+@extends('layouts.app')
 
 @section('content')
     <div class="card" style="padding: 0;">

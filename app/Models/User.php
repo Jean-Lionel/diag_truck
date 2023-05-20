@@ -47,4 +47,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // 	Page ya login ikoresha bose: docteur, infirmier,administrateur
+
+    public function isAdmin(){
+        return $this->role_name == 'admin';
+    }
+    public function isDocteur(){
+        return $this->role_name == 'DOCTEUR';
+    }
+    public function isInfirmier(){
+        return $this->role_name == 'INFIMIER';
+    }
 }
