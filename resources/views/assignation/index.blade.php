@@ -30,8 +30,7 @@
                         </th>
                         <th>Date</th>
 
-                        <th class="th-sm">Action
-                        </th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -45,20 +44,6 @@
                             <td>{{ $item->patient?->birthday }}</td>
                             <th>Dr {{ $item->infirmier?->name }}</th>
                             <td>{{  $item->created_at}}</td>
-
-                            <td>
-                                <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
-                                    title="Modifier">
-                                    <i class="bi bi-pencil-square"></i>
-                                </a>
-
-                                <a href="{{ route('patient.edit', $item) }}" title="Supprimer"
-                                    class="btn-sm btn btn-danger">
-                                    <i class="bi bi-trash" title="Supprimer"></i>
-                                </a>
-
-
-                            </td>
                         </tr>
                     @endforeach
 
