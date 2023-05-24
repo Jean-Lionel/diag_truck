@@ -2,6 +2,6 @@
     @extends('layouts.app')
 
     @section('content')
-        assignation.create template
+        <livewire:visit.visite-component />
     @endsection
 
