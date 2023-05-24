@@ -20,6 +20,8 @@
                         </th>
                         <th class="th-sm">Patient ID
                         </th>
+                        <th class="th-sm">Sexe
+                        </th>
                         <th class="th-sm">Nom
                         </th>
                         <th class="th-sm">Prénom
@@ -44,6 +46,7 @@
                         <tr>
                             <td> {{ ++$loop->index }}</td>
                             <td>{{ $item->patientId }}</td>
+                            <td>{{ $item->sexe }}</td>
                             <td>{{ $item->first_name }}</td>
                             <td>{{ $item->last_name }}</td>
                             <td>{{ $item->birthday }}</td>
