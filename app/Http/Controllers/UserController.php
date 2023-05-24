@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserStoreRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
+use Hash;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -25,8 +26,17 @@ class UserController extends Controller
 
     public function store(UserStoreRequest $request)
     {
-        $user = User::create($request->validated());
+       // dd($request->all());
 
+        $user = User::create([
+            'name' => $request->name,
+            'lastName' => $request->lastName,
+            'phone' => $request->phone,
+            'sexe' => $request->sexe,
+            'role_name' => $request->role_name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
         session()->flash('user.id', $user->id);
 
         return redirect()->route('user.index');

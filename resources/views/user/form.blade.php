@@ -33,12 +33,7 @@
                 'label' => 'email',
                 'value' => $user->email,
             ])
-            @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'birthday',
-                'label' => 'Date de Naissance',
-                'value' => $user->birthday,
-            ])
+
             {{-- @include('shared.input', [
                 'class' => 'col-6',
                 'name' => '',

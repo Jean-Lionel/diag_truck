@@ -14,6 +14,7 @@ namespace App\Models{
 /**
  * App\Models\Assignation
  *
+ * @mixin IdeHelperAssignation
  * @property int $id
  * @property int $patient_id
  * @property int $infirmier_id
@@ -35,15 +36,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Assignation whereInfirmierId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Assignation wherePatientId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Assignation whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperAssignation {}
+	class Assignation extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\Diagnostic
  *
+ * @mixin IdeHelperDiagnostic
  * @property int $id
  * @property int $patient_id
  * @property int $docteur_id
@@ -64,15 +65,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Diagnostic whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Diagnostic wherePatientId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Diagnostic whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperDiagnostic {}
+	class Diagnostic extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\Medicament
  *
+ * @mixin IdeHelperMedicament
  * @property int $id
  * @property string|null $name
  * @property string|null $description
@@ -90,15 +91,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament whereTypeMedicamentId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperMedicament {}
+	class Medicament extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\Patient
  *
+ * @mixin IdeHelperPatient
  * @property int $id
  * @property string $first_name
  * @property string $last_name
@@ -125,15 +126,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Patient wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Patient whereSexe($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Patient whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperPatient {}
+	class Patient extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\Prescription
  *
+ * @mixin IdeHelperPrescription
  * @property int $id
  * @property int $diag_id
  * @property int $med_id
@@ -152,15 +153,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Prescription whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Prescription whereMedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Prescription whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperPrescription {}
+	class Prescription extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\Role
  *
+ * @mixin IdeHelperRole
  * @property int $id
  * @property string $name
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -173,15 +174,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperRole {}
+	class Role extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\Service
  *
+ * @mixin IdeHelperService
  * @property int $id
  * @property string|null $name
  * @property int $status
@@ -198,15 +199,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Service whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Service whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Service whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperService {}
+	class Service extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\TypeMedicament
  *
+ * @mixin IdeHelperTypeMedicament
  * @property int $id
  * @property string $name
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -219,15 +220,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|TypeMedicament whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TypeMedicament whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TypeMedicament whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperTypeMedicament {}
+	class TypeMedicament extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
  * App\Models\User
  *
+ * @mixin IdeHelperUser
  * @property int $id
  * @property string|null $name
  * @property string|null $lastName
@@ -266,8 +267,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSpecialiteDocteur($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereStatut($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
- * @mixin \Eloquent
  */
-	class IdeHelperUser {}
+	class User extends \Eloquent {}
 }
 

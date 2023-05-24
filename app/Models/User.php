@@ -27,6 +27,7 @@ class User extends Authenticatable
         'sexe',
         'email',
         'password',
+        'role_name',
         'groupe',
         'specialite_Docteur',
         'qualification_infirmier',

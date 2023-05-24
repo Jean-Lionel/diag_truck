@@ -27,6 +27,8 @@
                         </th>
                         <th class="th-sm">Email
                         </th>
+                        <th class="th-sm">Role
+                        </th>
                         <th class="th-sm">Sexe
                         </th>
 
@@ -43,6 +45,7 @@
                             <td>{{ $item->lastName }}</td>
                             <td>{{ $item->phone }}</td>
                             <td>{{ $item->email }}</td>
+                            <td>{{ $item->role_name }}</td>
                             <td>{{ $item->sexe }}</td>
                             <td>
                                 <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
