@@ -26,14 +26,10 @@
                         </th>
                         <th class="th-sm">Date de  naissnace
                         </th>
-                        <th class="th-sm">Adresse
+                        <th class="th-sm">Visite du Docteur
                         </th>
-                        <th class="th-sm">Téléphone
-                        </th>
-                        <th class="th-sm">Sexe
-                        </th>
-                        <th class="th-sm">Chef de Famille
-                        </th>
+                        <th>Date</th>
+
                         <th class="th-sm">Action
                         </th>
                     </tr>
@@ -43,14 +39,13 @@
                     @foreach ($assignations as $item)
                         <tr>
                             <td> {{ ++$loop->index }}</td>
-                            <td>{{ $item->patientId }}</td>
-                            <td>{{ $item->first_name }}</td>
-                            <td>{{ $item->last_name }}</td>
-                            <td>{{ $item->birthday }}</td>
-                            <td>{{ $item->address }}</td>
-                            <td>{{ $item->phone }}</td>
-                            <td>{{ $item->sexe }}</td>
-                            <td>{{ $item->chef_famille }}</td>
+                            <td>{{ $item->patient?->patient_id }}</td>
+                            <td>{{ $item->patient?->first_name }}</td>
+                            <td>{{ $item->patient?->last_name }}</td>
+                            <td>{{ $item->patient?->birthday }}</td>
+                            <th>Dr {{ $item->infirmier?->name }}</th>
+                            <td>{{  $item->created_at}}</td>
+
                             <td>
                                 <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">

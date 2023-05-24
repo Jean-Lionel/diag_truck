@@ -13,7 +13,7 @@ class AssignationController extends Controller
 {
     public function index(Request $request): View
     {
-        $assignations = Assignation::all();
+        $assignations = Assignation::latest()->get();
 
         return view('assignation.index', compact('assignations'));
     }
