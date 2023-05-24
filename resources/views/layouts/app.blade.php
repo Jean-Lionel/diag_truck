@@ -98,7 +98,7 @@
             <div class="col">
                 <nav class="navbar navbar-light bg-secondary rounded">
                     <div>
-                        <h5> DIAGTRACK</h5>
+                        <h5> DIAGTRACK ROLE : {{ auth()->user()?->role_name }}</h5>
                     </div>
                 </nav>
 

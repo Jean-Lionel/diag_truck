@@ -55,7 +55,7 @@ class User extends Authenticatable
     // 	Page ya login ikoresha bose: docteur, infirmier,administrateur
 
     public function isAdmin(){
-        return $this->role_name == 'admin';
+        return $this->role_name == 'ADMIN';
     }
     public function isDocteur(){
         return $this->role_name == 'DOCTEUR';

@@ -13,34 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.dashboard');
-});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+    return view('layouts.dashboard');
+    });
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('patient', App\Http\Controllers\PatientController::class);
+    Route::resource('service', App\Http\Controllers\ServiceController::class);
+    Route::resource('type-medicament', App\Http\Controllers\TypeMedicamentController::class);
+    Route::resource('medicament', App\Http\Controllers\MedicamentController::class);
+    Route::resource('assignation', App\Http\Controllers\AssignationController::class);
+    Route::resource('diagnostic', App\Http\Controllers\DiagnosticController::class);
+    Route::resource('prescription', App\Http\Controllers\PrescriptionController::class);
+    Route::resource('role', App\Http\Controllers\RoleController::class);
+    Route::resource('user', App\Http\Controllers\UserController::class);
+});;
 
 
-Route::resource('patient', App\Http\Controllers\PatientController::class);
 
 
-Route::resource('service', App\Http\Controllers\ServiceController::class);
 
-
-Route::resource('type-medicament', App\Http\Controllers\TypeMedicamentController::class);
-
-Route::resource('medicament', App\Http\Controllers\MedicamentController::class);
-
-
-Route::resource('assignation', App\Http\Controllers\AssignationController::class);
-
-
-Route::resource('diagnostic', App\Http\Controllers\DiagnosticController::class);
-
-Route::resource('prescription', App\Http\Controllers\PrescriptionController::class);
-
-Route::resource('role', App\Http\Controllers\RoleController::class);
-
-
-Route::resource('user', App\Http\Controllers\UserController::class);

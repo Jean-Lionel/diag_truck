@@ -43,6 +43,7 @@
             @include('shared.input', [
                 'class' => 'col-6',
                 'name' => 'password',
+                'type' => 'password',
                 'label' => 'Password',
                 'value' => $user->password,
             ])
