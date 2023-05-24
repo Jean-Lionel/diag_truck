@@ -11,33 +11,33 @@
         <div class="row ">
             @include('shared.input', [
                 'class' => 'col-6',
-                'name' => 'first_name',
-                'label' => 'Prénom',
-                'value' => $patient->first_name,
-            ])
-            @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'last_name',
+                'name' => 'name',
                 'label' => 'Nom',
-                'value' => $patient->last_name,
+                'value' => $user->name,
             ])
             @include('shared.input', [
                 'class' => 'col-6',
-                'name' => 'birthday',
-                'label' => 'Date de naissance',
-                'value' => $patient->birthday,
-            ])
-            @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'address',
-                'label' => 'Adresse',
-                'value' => $patient->address,
+                'name' => 'Prénom',
+                'label' => 'lastName',
+                'value' => $user->lastName,
             ])
             @include('shared.input', [
                 'class' => 'col-6',
                 'name' => 'phone',
-                'label' => 'Téléphone',
-                'value' => $patient->phone,
+                'label' => 'Phone',
+                'value' => $user->phone,
+            ])
+            @include('shared.input', [
+                'class' => 'col-6',
+                'name' => 'email',
+                'label' => 'email',
+                'value' => $user->email,
+            ])
+            @include('shared.input', [
+                'class' => 'col-6',
+                'name' => 'birthday',
+                'label' => 'Date de Naissance',
+                'value' => $user->birthday,
             ])
             {{-- @include('shared.input', [
                 'class' => 'col-6',
@@ -47,41 +47,34 @@
             ]) --}}
             @include('shared.input', [
                 'class' => 'col-6',
-                'name' => 'chef_famille',
-                'label' => 'Chef de Famille',
-                'value' => $patient->chef_famille,
+                'name' => 'password',
+                'label' => 'Password',
+                'value' => $user->password,
             ])
             <div class="col-6">
                 <div class="form-group">
                     <label for="">Sexe</label>
                     <select name="sexe" id="" class="form-control @error('sexe') is-invalid @enderror">
                         <option value=""></option>
-                        <option value="HOMME" @if ($patient->sexe == 'HOMME') selected @endif>HOMME</option>
-                        <option value="FEMME" @if ($patient->sexe == 'FEMME') selected @endif>FEMME</option>
+                        <option value="HOMME" @if ($user->sexe == 'HOMME') selected @endif>HOMME</option>
+                        <option value="FEMME" @if ($user->sexe == 'FEMME') selected @endif>FEMME</option>
                     </select>
                     @error('sexe')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
 
                 </div>
-            </div>
-            {{-- <div class="col-md-12">
-                <div class="form-group">
-                    <label for="team_id">Groupe</label>
-                    <select name="team_id" id="team_id"
-                        class="form-control form-control-sm  @error('team_id') is-invalid @enderror">
-                        <option value="">...select</option>
-                        {{-- @foreach ($teams as $team)
-                            <option value="{{ $team->id }}" @if ($team->id == $member?->team?->id) selected @endif>
-                                {{ $team->name }}</option>
-                        @endforeach
-                    </select>
+        </div>
 
-                    @error('team_id')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div> --}}
+        <div class="col-md-6">
+            <label for="">Rôle</label>
+
+            <select name="role_name" id="role_name" class="form-control form-control-sm">
+                <option value=""></option>
+                <option value="DOCTEUR">DOCTEUR</option>
+                <option value="INFIRMIER">INFIRMIER</option>
+                <option value="ADMIN">ADMIN</option>
+            </select>
 
         </div>
         <div class="row

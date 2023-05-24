@@ -7,7 +7,7 @@
 
             <div class="d-flex justify-content-between">
                 <h5 class="card-title">Liste du personnels</h5>
-                <a href="{{ route('patient.create') }}" type="button" class="btn btn-primary btn-block">
+                <a href="{{ route('user.create') }}" type="button" class="btn btn-primary btn-block">
                     <i class="bi bi-plus-circle"></i> Ajouter
                 </a>
             </div>

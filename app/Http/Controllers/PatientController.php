@@ -14,7 +14,6 @@ class PatientController extends Controller
     public function index(Request $request)
     {
         $patients = Patient::all();
-
         return view('patient.index', compact('patients'));
     }
 

@@ -74,7 +74,7 @@
                         {{-- @foreach ($teams as $team)
                             <option value="{{ $team->id }}" @if ($team->id == $member?->team?->id) selected @endif>
                                 {{ $team->name }}</option>
-                        @endforeach 
+                        @endforeach
                     </select>
 
                     @error('team_id')
