@@ -16,60 +16,60 @@
     </style>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
+      <i class='bx bxl-plus-medical'></i>
       <span class="logo_name">DIAGTRACK</span>
     </div>
       <ul class="nav-links">
         <li>
           <a href="#" class="active">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Dashboard</span>
+            <span class="links_name">Tableau De Bord</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Patient</span>
+            <i class='bx bx-accessibility' ></i>
+            <span class="links_name">Patients</span>
           </a>
         </li>
 
         <li>
           <a href="#">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Order list</span>
+            <i class='bx bx-user-plus' ></i>
+            <span class="links_name">Personnels</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links_name">Analytics</span>
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Assignation</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Stock</span>
+            <i class='bx bx-dna' ></i>
+            <span class="links_name">Diagnostics</span>
           </a>
         </li>
         <li>
           <a href="#">
             <i class='bx bx-book-alt' ></i>
-            <span class="links_name">Total order</span>
+            <span class="links_name">Prescriptions</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-user' ></i>
-            <span class="links_name">Team</span>
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Services</span>
           </a>
         </li>
         <li>
           <a href="#">
             <i class='bx bx-message' ></i>
-            <span class="links_name">Messages</span>
+            <span class="links_name">Dossiers Medicals</span>
           </a>
         </li>
-        <li>
+        {{-- <li>
           <a href="#">
             <i class='bx bx-heart' ></i>
             <span class="links_name">Favrorites</span>
@@ -80,7 +80,7 @@
             <i class='bx bx-cog' ></i>
             <span class="links_name">Setting</span>
           </a>
-        </li>
+        </li> --}}
         <li class="log_out">
           <a href="#">
             <i class='bx bx-log-out'></i>
@@ -93,16 +93,16 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Dashboard</span>
+        <span class="dashboard">Tableau De Bord</span>
       </div>
       <div class="search-box">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Recherche...">
         <i class='bx bx-search' ></i>
       </div>
       <div class="profile-details">
         <img src="images/profile.jpg" alt="">
         <span class="admin_name">Prem Shahi</span>
-        <i class='bx bx-chevron-down' ></i>
+        {{-- <i class='bx bx-chevron-down' ></i> --}}
       </div>
     </nav>
 
@@ -110,45 +110,45 @@
       <div class="overview-boxes">
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Order</div>
-            <div class="number">40,876</div>
-            <div class="indicator">
+            <div class="box-topic">Patients</div>
+            <div class="number">40</div>
+            {{-- <div class="indicator">
               <i class='bx bx-up-arrow-alt'></i>
               <span class="text">Up from yesterday</span>
-            </div>
+            </div> --}}
           </div>
           <i class='bx bx-cart-alt cart'></i>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Sales</div>
-            <div class="number">38,876</div>
-            <div class="indicator">
+            <div class="box-topic">Personnels</div>
+            <div class="number">38</div>
+            {{-- <div class="indicator">
               <i class='bx bx-up-arrow-alt'></i>
               <span class="text">Up from yesterday</span>
-            </div>
+            </div> --}}
           </div>
           <i class='bx bxs-cart-add cart two' ></i>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Profit</div>
-            <div class="number">$12,876</div>
-            <div class="indicator">
+            <div class="box-topic">Visites</div>
+            <div class="number">10</div>
+            {{-- <div class="indicator">
               <i class='bx bx-up-arrow-alt'></i>
               <span class="text">Up from yesterday</span>
-            </div>
+            </div> --}}
           </div>
           <i class='bx bx-cart cart three' ></i>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Return</div>
-            <div class="number">11,086</div>
-            <div class="indicator">
+            <div class="box-topic">Services</div>
+            <div class="number">11</div>
+            {{-- <div class="indicator">
               <i class='bx bx-down-arrow-alt down'></i>
               <span class="text">Down From Today</span>
-            </div>
+            </div> --}}
           </div>
           <i class='bx bxs-cart-download cart four' ></i>
         </div>
