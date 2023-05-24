@@ -18,22 +18,18 @@
                     <tr>
                         <th class="th-sm">#
                         </th>
-                        <th class="th-sm">Patient ID
-                        </th>
+
                         <th class="th-sm">Nom
                         </th>
                         <th class="th-sm">Prénom
                         </th>
-                        <th class="th-sm">Date de  naissnace
-                        </th>
-                        <th class="th-sm">Adresse
-                        </th>
                         <th class="th-sm">Téléphone
+                        </th>
+                        <th class="th-sm">Email
                         </th>
                         <th class="th-sm">Sexe
                         </th>
-                        <th class="th-sm">Chef de Famille
-                        </th>
+
                         <th class="th-sm">Action
                         </th>
                     </tr>
@@ -44,13 +40,10 @@
                         <tr>
                             <td> {{ ++$loop->index }}</td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->first_name }}</td>
-                            <td>{{ $item->last_name }}</td>
-                            <td>{{ $item->birthday }}</td>
-                            <td>{{ $item->address }}</td>
+                            <td>{{ $item->lastName }}</td>
                             <td>{{ $item->phone }}</td>
+                            <td>{{ $item->email }}</td>
                             <td>{{ $item->sexe }}</td>
-                            <td>{{ $item->chef_famille }}</td>
                             <td>
                                 <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">
