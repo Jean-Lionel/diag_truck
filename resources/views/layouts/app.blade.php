@@ -49,6 +49,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{ route('assignation.index') }}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-cash-coin"></i>
+                                <span class="ms-1 d-none d-sm-inline">Visite</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{ route('patient.index') }}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-cash-coin"></i>
                                 <span class="ms-1 d-none d-sm-inline">Patient</span>
