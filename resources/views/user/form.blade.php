@@ -17,8 +17,8 @@
             ])
             @include('shared.input', [
                 'class' => 'col-6',
-                'name' => 'Prénom',
-                'label' => 'lastName',
+                'name' => 'lastName',
+                'label' => 'Prénom',
                 'value' => $user->lastName,
             ])
             @include('shared.input', [

@@ -14,6 +14,6 @@
     @endif
     <form action="{{ route('user.store') }}" method="post">
         @method('POST')
-        @include('user.form', ['title' => 'Ajouter un Patient'])
+        @include('user.form', ['title' => "Ajout du personnel"])
     </form>
 @endsection

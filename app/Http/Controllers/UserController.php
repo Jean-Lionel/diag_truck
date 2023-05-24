@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserStoreRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -55,7 +54,6 @@ class UserController extends Controller
     public function destroy(Request $request, User $user)
     {
         $user->delete();
-
         return redirect()->route('user.index');
     }
 }
