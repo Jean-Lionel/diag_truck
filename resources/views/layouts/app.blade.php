@@ -52,7 +52,7 @@
             </li>
             <li>
                 <a href="{{ route('medicament.index') }}">
-                    <i class='bx bx-dna' ></i>
+                    <i class='bx bx-capsule' ></i>
                     <span class="links_name">Medicament</span>
                 </a>
             </li>
@@ -64,7 +64,7 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-book-alt' ></i>
+                    <i class='bx bx-edit' ></i>
                     <span class="links_name">Prescriptions</span>
                 </a>
             </li>
