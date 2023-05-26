@@ -53,7 +53,12 @@ class UserController extends Controller
 
     public function update(UserUpdateRequest $request, User $user)
     {
-        $user->update($request->validated());
+        $data = $request->all();
+        if($data["password"] != ""){
+            $data["password"] = Hash::make($request->password);
+        }
+
+        $user->update( $data);
 
         session()->flash('user.id', $user->id);
 
