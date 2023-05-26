@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     public function index(Request $request): View
     {
-        $users = User::all();
+        $users = User::latest()->get();
 
         return view('user.index', compact('users'));
     }
@@ -27,7 +27,6 @@ class UserController extends Controller
     public function store(UserStoreRequest $request)
     {
        // dd($request->all());
-
         $user = User::create([
             'name' => $request->name,
             'lastName' => $request->lastName,

@@ -45,7 +45,6 @@
                 'name' => 'password',
                 'type' => 'password',
                 'label' => 'Password',
-                'value' => $user->password,
             ])
             <div class="col-6">
                 <div class="form-group">

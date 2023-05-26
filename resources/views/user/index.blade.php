@@ -48,12 +48,12 @@
                             <td>{{ $item->role_name }}</td>
                             <td>{{ $item->sexe }}</td>
                             <td>
-                                <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
+                                <a href="{{ route('user.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <a href="{{ route('patient.edit', $item) }}" title="Supprimer"
+                                <a href="{{ route('user.edit', $item) }}" title="Supprimer"
                                     class="btn-sm btn btn-danger">
                                     <i class="bi bi-trash" title="Supprimer"></i>
                                 </a>
