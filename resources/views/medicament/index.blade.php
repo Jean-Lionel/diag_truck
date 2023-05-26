@@ -7,7 +7,7 @@
 
             <div class="d-flex justify-content-between">
                 <h5 class="card-title">Liste des Medicaments</h5>
-                <a href="{{ route('patient.create') }}" type="button" class="btn btn-primary btn-block">
+                <a href="{{ route('medicament.create') }}" type="button" class="btn btn-primary btn-block">
                     <i class="bi bi-plus-circle"></i> Ajouter
                 </a>
             </div>
@@ -60,7 +60,7 @@
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <a href="{{ route('patient.edit', $item) }}" title="Supprimer"
+                                <a href="{{ route('medicament.edit', $item) }}" title="Supprimer"
                                     class="btn-sm btn btn-danger">
                                     <i class="bi bi-trash" title="Supprimer"></i>
                                 </a>
