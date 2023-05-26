@@ -1,7 +1,7 @@
 @php
-    $user;
-    $title;
-    $isUpdate ??= false;
+$user;
+$title;
+$isUpdate ??= false;
 @endphp
 <div class="container">
 
@@ -10,41 +10,41 @@
         @csrf
         <div class="row ">
             @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'name',
-                'label' => 'Nom',
-                'value' => $user->name,
+            'class' => 'col-6',
+            'name' => 'name',
+            'label' => 'Nom',
+            'value' => $user->name,
             ])
             @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'lastName',
-                'label' => 'Prénom',
-                'value' => $user->lastName,
+            'class' => 'col-6',
+            'name' => 'lastName',
+            'label' => 'Prénom',
+            'value' => $user->lastName,
             ])
             @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'phone',
-                'label' => 'Phone',
-                'value' => $user->phone,
+            'class' => 'col-6',
+            'name' => 'phone',
+            'label' => 'Phone',
+            'value' => $user->phone,
             ])
             @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'email',
-                'label' => 'email',
-                'value' => $user->email,
+            'class' => 'col-6',
+            'name' => 'email',
+            'label' => 'email',
+            'value' => $user->email,
             ])
 
             {{-- @include('shared.input', [
-                'class' => 'col-6',
-                'name' => '',
-                'label' => 'Email',
-                'value' => $patient->email,
+            'class' => 'col-6',
+            'name' => '',
+            'label' => 'Email',
+            'value' => $patient->email,
             ]) --}}
             @include('shared.input', [
-                'class' => 'col-6',
-                'name' => 'password',
-                'type' => 'password',
-                'label' => 'Password',
+            'class' => 'col-6',
+            'name' => 'password',
+            'type' => 'password',
+            'label' => 'Password',
             ])
             <div class="col-6">
                 <div class="form-group">
@@ -55,26 +55,38 @@
                         <option value="FEMME" @if ($user->sexe == 'FEMME') selected @endif>FEMME</option>
                     </select>
                     @error('sexe')
-                        <div class="invalid-feedback">{{ $message }}</div>
+                    <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
 
                 </div>
-        </div>
+            </div>
 
-        <div class="col-md-6">
-            <label for="">Rôle</label>
+            <div class="col-md-6">
+                <label for="">Rôle</label>
 
-            <select name="role_name" id="role_name" class="form-control form-control-sm">
-                <option value=""></option>
-                <option value="DOCTEUR">DOCTEUR</option>
-                <option value="INFIRMIER">INFIRMIER</option>
-                <option value="ADMIN">ADMIN</option>
-            </select>
+                <select name="role_name" id="role_name" class="form-control form-control-sm">
+                    <option value=""></option>
+                    <option value="DOCTEUR"
+                    @if ($user->role_name == "DOCTEUR")
+                    selected
+                    @endif
+                    >DOCTEUR</option>
+                    <option value="INFIRMIER"
+                    @if ($user->role_name == "INFIRMIER")
+                    selected
+                    @endif
+                    >INFIRMIER</option>
+                    <option value="ADMIN"
+                    @if ($user->role_name == "ADMIN")
+                    selected
+                    @endif
+                    >ADMIN</option>
+                </select>
 
-        </div>
-        <div class="row
-                        p-2">
+            </div>
+            <div class="row
+            p-2">
             <button type="submit"
-                class="btn btn-sm mt-4 btn-primary">{{ $isUpdate ? 'Modifier' : 'Enregistrer' }}</button>
+            class="btn btn-sm mt-4 btn-primary">{{ $isUpdate ? 'Modifier' : 'Enregistrer' }}</button>
         </div>
     </div>
