@@ -14,6 +14,7 @@ class MedicamentController extends Controller
     public function index(Request $request)
     {
         $medicaments = Medicament::all();
+       // dd($medicaments );
 
         return view('medicament.index', compact('medicaments'));
     }
