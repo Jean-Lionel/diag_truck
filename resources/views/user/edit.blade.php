@@ -11,7 +11,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <form action="{{ route('patient.update', $user) }}" method="post">
+    <form action="{{ route('user.update', $user) }}" method="post">
         @method('PUT')
 
         @include('user.form', [
