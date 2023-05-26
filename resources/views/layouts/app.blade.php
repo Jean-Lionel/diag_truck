@@ -32,14 +32,14 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{ route('patient.index') }}">
             <i class='bx bx-accessibility' ></i>
             <span class="links_name">Patients</span>
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="{{ route('user.index') }}">
             <i class='bx bx-user-plus' ></i>
             <span class="links_name">Personnels</span>
           </a>
