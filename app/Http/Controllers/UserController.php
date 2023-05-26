@@ -56,6 +56,8 @@ class UserController extends Controller
         $data = $request->all();
         if($data["password"] != ""){
             $data["password"] = Hash::make($request->password);
+        }else{
+            unset($data["password"]);
         }
 
         $user->update( $data);
