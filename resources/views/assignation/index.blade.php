@@ -20,13 +20,13 @@
                         </th>
                         <th class="th-sm">Patient ID
                         </th>
-                        <th class="th-sm">Sexe
-                        </th>
                         <th class="th-sm">Nom
                         </th>
                         <th class="th-sm">Prénom
                         </th>
                         <th class="th-sm">Date de  naissnace
+                        </th>
+                        <th class="th-sm">Sexe
                         </th>
                         <th class="th-sm">Visite du Docteur
                         </th>
@@ -41,10 +41,10 @@
                         <tr>
                             <td> {{ ++$loop->index }}</td>
                             <td>{{ $item->patient?->patient_id }}</td>
-                            <td>{{ $item->patient?->sexe }}</td>
                             <td>{{ $item->patient?->first_name }}</td>
                             <td>{{ $item->patient?->last_name }}</td>
                             <td>{{ $item->patient?->birthday }}</td>
+                            <td>{{ $item->patient?->sexe }}</td>
                             <th>Dr {{ $item->infirmier?->name }}</th>
                             <td>{{  $item->created_at}}</td>
                         </tr>

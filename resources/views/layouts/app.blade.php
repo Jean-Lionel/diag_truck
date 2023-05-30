@@ -112,10 +112,10 @@
             <i class='bx bx-menu sidebarBtn'></i>
             <span class="dashboard">Tableau De Bord</span>
         </div>
-        <div class="search-box">
+        {{-- <div class="search-box">
             <input type="text" placeholder="Recherche...">
             <i class='bx bx-search' ></i>
-        </div>
+        </div> --}}
         <div class="profile-details">
             <img src="images/profile.jpg" alt="">
             <span class="admin_name">Prem Shahi</span>
