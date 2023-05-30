@@ -14,21 +14,22 @@ class MedicamentController extends Controller
     public function index(Request $request)
     {
         $medicaments = Medicament::all();
-       // dd($medicaments );
+        // dd($medicaments );
 
         return view('medicament.index', compact('medicaments'));
     }
 
     public function create(Request $request)
     {
-        return view('medicament.create');
+        $medicament = new Medicament();
+        return view('medicament.create', compact('medicament'));
     }
 
     public function store(MedicamentStoreRequest $request)
     {
         $medicament = Medicament::create($request->validated());
 
-       session()->flash('medicament.id', $medicament->id);
+        session()->flash('medicament.id', $medicament->id);
 
         return redirect()->route('medicament.index');
     }

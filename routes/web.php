@@ -18,7 +18,7 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
-    return view('layouts.dashboard');
+        return view('layouts.dashboard');
     });
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('patient', App\Http\Controllers\PatientController::class);
@@ -30,9 +30,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('prescription', App\Http\Controllers\PrescriptionController::class);
     Route::resource('role', App\Http\Controllers\RoleController::class);
     Route::resource('user', App\Http\Controllers\UserController::class);
-});;
-
-
-
-
-
+});
+;
