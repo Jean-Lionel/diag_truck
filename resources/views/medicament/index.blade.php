@@ -18,24 +18,13 @@
                     <tr>
                         <th class="th-sm">#
                         </th>
-                        <th class="th-sm">Patient ID
-                        </th>
-                        <th class="th-sm">Sexe
-                        </th>
+
                         <th class="th-sm">Nom
                         </th>
-                        <th class="th-sm">Prénom
+
+                        <th class="th-sm">Déscription
                         </th>
-                        <th class="th-sm">Date de  naissnace
-                        </th>
-                        <th class="th-sm">Adresse
-                        </th>
-                        <th class="th-sm">Téléphone
-                        </th>
-                        <th class="th-sm">Sexe
-                        </th>
-                        <th class="th-sm">Chef de Famille
-                        </th>
+
                         <th class="th-sm">Action
                         </th>
                     </tr>
@@ -45,22 +34,16 @@
                     @foreach ($medicaments as $item)
                         <tr>
                             <td> {{ ++$loop->index }}</td>
-                            <td>{{ $item->patientId }}</td>
-                            <td>{{ $item->sexe }}</td>
-                            <td>{{ $item->first_name }}</td>
-                            <td>{{ $item->last_name }}</td>
-                            <td>{{ $item->birthday }}</td>
-                            <td>{{ $item->address }}</td>
-                            <td>{{ $item->phone }}</td>
-                            <td>{{ $item->sexe }}</td>
-                            <td>{{ $item->chef_famille }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->description }}</td>
+
                             <td>
-                                <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
+                                <a href="{{ route('medicament.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <a href="{{ route('medicament.edit', $item) }}" title="Supprimer"
+                                <a href="{{ route('medicament.destroy', $item) }}" title="Supprimer"
                                     class="btn-sm btn btn-danger">
                                     <i class="bi bi-trash" title="Supprimer"></i>
                                 </a>
