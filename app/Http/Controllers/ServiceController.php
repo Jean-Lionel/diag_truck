@@ -20,7 +20,8 @@ class ServiceController extends Controller
 
     public function create(Request $request)
     {
-        return view('service.create');
+        $service = new Service();
+        return view('service.create', compact('service'));
     }
 
     public function store(ServiceStoreRequest $request)

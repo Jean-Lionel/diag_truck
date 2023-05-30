@@ -1,5 +1,5 @@
 @php
-    $medicament;
+    $service;
     $title;
     $isUpdate ??= false;
 @endphp
@@ -13,14 +13,19 @@
                 'class' => 'col-6',
                 'name' => 'name',
                 'label' => 'Nom',
-                'value' => $medicament->medicament,
+                'value' => $service->name,
+            ])
+            @include('shared.input', [
+                'class' => 'col-6',
+                'name' => 'status',
+                'label' => 'Status',
+                'value' => $service->status,
             ])
             @include('shared.input', [
                 'class' => 'col-6',
                 'name' => 'description',
-                'label' => 'Déscription',
-                'type' => 'textarea',
-                'value' => $medicament->description,
+                'label' => 'description',
+                'value' => $service->description,
             ])
 
 

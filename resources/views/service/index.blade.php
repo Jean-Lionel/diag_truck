@@ -22,6 +22,9 @@
                         <th class="th-sm">Nom
                         </th>
 
+                        <th class="th-sm">Status
+                        </th>
+
                         <th class="th-sm">Déscription
                         </th>
 
@@ -35,8 +38,8 @@
                         <tr>
                             <td> {{ ++$loop->index }}</td>
                             <td>{{ $item->name }}</td>
+                            <td>{{ $item->status }}</td>
                             <td>{{ $item->description }}</td>
-
                             <td>
                                 <a href="{{ route('medicament.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">

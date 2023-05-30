@@ -12,7 +12,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <form action="{{ route('medicament.store') }}" method="post">
+    <form action="{{ route('service.store') }}" method="post">
         @method('POST')
         @include('service.form', ['title' => 'Ajouter un Patient'])
     </form>
