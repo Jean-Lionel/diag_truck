@@ -69,7 +69,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('service.index') }}">
                     <i class='bx bx-list-ul' ></i>
                     <span class="links_name">Services</span>
                 </a>

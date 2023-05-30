@@ -27,7 +27,7 @@ class ServiceController extends Controller
     {
         $service = Service::create($request->validated());
 
-       session()->flash('service.id', $service->id);
+        session()->flash('service.id', $service->id);
 
         return redirect()->route('service.index');
     }

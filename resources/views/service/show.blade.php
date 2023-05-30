@@ -1,7 +1,5 @@
-{{--
-    @extends('layouts.app')
+@extends('layouts.app')
 
-    @section('content')
-        service.show template
-    @endsection
---}}
+@section('content')
+    member.show template
+@endsection
