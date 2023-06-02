@@ -22,7 +22,6 @@ class MedicamentUpdateRequest extends FormRequest
         return [
             'name' => ['nullable', 'string'],
             'description' => ['nullable', 'string'],
-            'type_medicament_id' => ['required', 'integer', 'exists:type_medicaments,id'],
         ];
     }
 }

@@ -46,6 +46,7 @@ class MedicamentController extends Controller
 
     public function update(MedicamentUpdateRequest $request, Medicament $medicament)
     {
+        // dd($request->all());
         $medicament->update($request->validated());
 
         session()->flash('medicament.id', $medicament->id);
