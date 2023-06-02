@@ -77,10 +77,10 @@ namespace App\Models{
  * @property int $id
  * @property string|null $name
  * @property string|null $description
- * @property int $type_medicament_id
+ * @property int|null $type_medicament_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\TypeMedicament $typeMedicament
+ * @property-read \App\Models\TypeMedicament|null $typeMedicament
  * @method static \Database\Factories\MedicamentFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament newQuery()

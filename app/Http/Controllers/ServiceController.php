@@ -26,6 +26,7 @@ class ServiceController extends Controller
 
     public function store(ServiceStoreRequest $request)
     {
+
         $service = Service::create($request->validated());
 
         session()->flash('service.id', $service->id);

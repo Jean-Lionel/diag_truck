@@ -38,7 +38,7 @@
                         <tr>
                             <td> {{ ++$loop->index }}</td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->status }}</td>
+                            <td>{{ $item->status ? 'ACTIF' : 'INACTIF' }}</td>
                             <td>{{ $item->description }}</td>
                             <td>
                                 <a href="{{ route('medicament.edit', $item) }}" class="btn-sm btn btn-primary"
