@@ -46,6 +46,7 @@ class ServiceController extends Controller
 
     public function update(ServiceUpdateRequest $request, Service $service)
     {
+        // dd($request->validated());
         $service->update($request->validated());
 
         session()->flash('service.id', $service->id);

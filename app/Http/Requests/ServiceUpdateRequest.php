@@ -22,6 +22,7 @@ class ServiceUpdateRequest extends FormRequest
         return [
             'name' => ['nullable', 'string'],
             'description' => ['nullable', 'string'],
+            'status' => ['nullable'],
         ];
     }
 }

@@ -22,6 +22,7 @@ class ServiceStoreRequest extends FormRequest
         return [
             'name' => ['required', 'string'],
             'description' => ['nullable', 'string'],
+            'service' => ['nullable'],
         ];
     }
 }
