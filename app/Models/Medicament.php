@@ -22,7 +22,7 @@ class Medicament extends Model
     protected $fillable = [
         'name',
         'description',
-        'type_medicament_id',
+        
     ];
 
     /**

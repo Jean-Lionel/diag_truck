@@ -24,7 +24,7 @@ class MedicamentFactory extends Factory
         return [
             'name' => $this->faker->name,
             'description' => $this->faker->text,
-            'type_medicament_id' => TypeMedicament::factory(),
+            //'type_medicament_id' => TypeMedicament::factory(),
         ];
     }
 }

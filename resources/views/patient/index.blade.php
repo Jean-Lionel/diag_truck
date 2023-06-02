@@ -34,6 +34,10 @@
                         </th>
                         <th class="th-sm">Chef de Famille
                         </th>
+                        <th class="th-sm">Nationalité
+                        </th>
+                        <th class="th-sm">Groupe sanguin
+                        </th>
                         <th class="th-sm">Action
                         </th>
                     </tr>
@@ -51,6 +55,8 @@
                             <td>{{ $item->phone }}</td>
                             <td>{{ $item->sexe }}</td>
                             <td>{{ $item->chef_famille }}</td>
+                            <td>{{ $item->groupe_sanguin }}</td>
+                            <td>{{ $item->nationalite }}</td>
                             <td>
                                 <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">

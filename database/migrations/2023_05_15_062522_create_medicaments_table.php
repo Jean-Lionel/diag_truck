@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->longText('description')->nullable();
-            $table->foreignId('type_medicament_id')->constrained('TypeMedicaments');
+            //$table->foreignId('type_medicament_id')->constrained('TypeMedicaments')->nullable();
             $table->timestamps();
         });
 
