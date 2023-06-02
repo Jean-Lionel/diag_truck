@@ -25,8 +25,10 @@ class PatientStoreRequest extends FormRequest
             'birthday' => ['required'],
             'address' => ['nullable', 'string'],
             'phone' => ['nullable', 'string'],
-            'sexe' => ['required','string'],
+            'sexe' => ['required', 'string'],
             'chef_famille' => ['nullable', 'string'],
+            'groupe_sanguin' => ['nullable', 'string'],
+            'nationalite' => ['nullable', 'string'],
         ];
     }
 }

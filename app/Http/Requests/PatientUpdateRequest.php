@@ -24,9 +24,11 @@ class PatientUpdateRequest extends FormRequest
             'last_name' => ['required', 'string'],
             'birthday' => ['required'],
             'address' => ['nullable', 'string'],
-            'sexe' => ['required','string'],
+            'sexe' => ['required', 'string'],
             'phone' => ['nullable', 'string'],
             'chef_famille' => ['nullable', 'string'],
+            'groupe_sanguin' => ['nullable', 'string'],
+            'nationalite' => ['nullable', 'string'],
         ];
     }
 }

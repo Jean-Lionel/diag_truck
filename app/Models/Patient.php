@@ -27,7 +27,8 @@ class Patient extends Model
         'sexe',
         'phone',
         'chef_famille',
-        'sexe',
+        'groupe_sanguin',
+        'nationalite',
     ];
 
     /**
@@ -40,7 +41,8 @@ class Patient extends Model
         'birthday' => 'datetime',
     ];
 
-    public function getPatientIdAttribute(){
-        return "A" .str_pad($this->id,5,"0",STR_PAD_LEFT);
+    public function getPatientIdAttribute()
+    {
+        return "A" . str_pad($this->id, 5, "0", STR_PAD_LEFT);
     }
 }
