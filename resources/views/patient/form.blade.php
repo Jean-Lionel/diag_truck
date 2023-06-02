@@ -45,11 +45,34 @@
                 'label' => 'Email',
                 'value' => $patient->email,
             ]) --}}
+
+
+             <div class="col-6">
+                <div class="form-group">
+                    <label for="">Groupe </label>
+                    <select name="groupe_sanguin" id="" class="form-control @error('sexe') is-invalid @enderror">
+                        <option value=""></option>
+                        <option value="O+" @if ($patient->sexe == 'O+') selected @endif>O <sup>+</sup></option>
+                        <option value="O-" @if ($patient->sexe == 'O-') selected @endif>O <sup>-</sup></option>
+                        <option value="A+" @if ($patient->sexe == 'O-') selected @endif>A <sup>+</sup></option>
+                         <option value="A-" @if ($patient->sexe == 'A-') selected @endif>A <sup>-</sup></option>
+                        <option value="B+" @if ($patient->sexe == 'B-') selected @endif>B <sup>+</sup></option>
+                         <option value="B-" @if ($patient->sexe == 'B-') selected @endif>B <sup>-</sup></option>
+                        <option value="AB+" @if ($patient->sexe == 'AB-') selected @endif>AB <sup>+</sup></option>
+                         <option value="AB-" @if ($patient->sexe == 'AB-') selected @endif>AB <sup>-</sup></option>
+
+                    </select>
+                    @error('sexe')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+
+                </div>
+            </div>
             @include('shared.input', [
                 'class' => 'col-6',
-                'name' => 'chef_famille',
-                'label' => 'Chef de Famille',
-                'value' => $patient->chef_famille,
+                'name' =>   'nationalite',
+                'label' => 'Nationalite',
+                'value' => $patient->nationalite,
             ])
             @include('shared.input', [
                 'class' => 'col-6',
