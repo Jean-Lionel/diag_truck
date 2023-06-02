@@ -41,12 +41,12 @@
                             <td>{{ $item->status ? 'ACTIF' : 'INACTIF' }}</td>
                             <td>{{ $item->description }}</td>
                             <td>
-                                <a href="{{ route('medicament.edit', $item) }}" class="btn-sm btn btn-primary"
+                                <a href="{{ route('service.edit', $item) }}" class="btn-sm btn btn-primary"
                                     title="Modifier">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <a href="{{ route('medicament.destroy', $item) }}" title="Supprimer"
+                                <a href="{{ route('service.destroy', $item) }}" title="Supprimer"
                                     class="btn-sm btn btn-danger">
                                     <i class="bi bi-trash" title="Supprimer"></i>
                                 </a>

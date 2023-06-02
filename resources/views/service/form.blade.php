@@ -25,6 +25,7 @@
                 'class' => 'col-6',
                 'name' => 'description',
                 'label' => 'description',
+                'type' => 'textarea',
                 'value' => $service->description,
             ])
 
