@@ -51,6 +51,18 @@
                 'label' => 'Chef de Famille',
                 'value' => $patient->chef_famille,
             ])
+            @include('shared.input', [
+                'class' => 'col-6',
+                'name' => 'groupe_sanguin',
+                'label' => 'Groupe sanguin',
+                'value' => $patient->groupe_sanguin,
+            ])
+            @include('shared.input', [
+                'class' => 'col-6',
+                'name' =>   'nationalite',
+                'label' => 'Nationalite',
+                'value' => $patient->nationalite,
+            ])
             <div class="col-6">
                 <div class="form-group">
                     <label for="">Sexe</label>
