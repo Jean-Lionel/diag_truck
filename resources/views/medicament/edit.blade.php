@@ -14,7 +14,7 @@
     <form action="{{ route('medicament.update', $medicament) }}" method="post">
         @method('PUT')
 
-        @include('patient.form', [
+        @include('medicament.form', [
             'title' => 'Modification ',
             'isUpdate' => true,
         ])
