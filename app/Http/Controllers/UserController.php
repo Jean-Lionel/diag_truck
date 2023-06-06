@@ -26,7 +26,7 @@ class UserController extends Controller
 
     public function store(UserStoreRequest $request)
     {
-       // dd($request->all());
+        dd($request->all());
         $user = User::create([
             'name' => $request->name,
             'lastName' => $request->lastName,
@@ -54,13 +54,13 @@ class UserController extends Controller
     public function update(UserUpdateRequest $request, User $user)
     {
         $data = $request->all();
-        if($data["password"] != ""){
+        if ($data["password"] != "") {
             $data["password"] = Hash::make($request->password);
-        }else{
+        } else {
             unset($data["password"]);
         }
 
-        $user->update( $data);
+        $user->update($data);
 
         session()->flash('user.id', $user->id);
 
