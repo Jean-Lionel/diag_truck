@@ -76,9 +76,9 @@
             ])
             @include('shared.input', [
                 'class' => 'col-6',
-                'name' => 'groupe_sanguin',
-                'label' => 'Groupe Sanguin',
-                'value' => $patient->groupe_sanguin,
+                'name' => 'chef_famille',
+                'label' => 'Chef Famille',
+                'value' => $patient->chef_famille,
             ])
             <div class="col-6">
                 <div class="form-group">
