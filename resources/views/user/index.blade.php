@@ -45,8 +45,8 @@
                             <td>{{ $item->lastName }}</td>
                             <td>{{ $item->phone }}</td>
                             <td>{{ $item->email }}</td>
-                            <td>{{ $item->role_name }} :  ({{ $item->groupe }} ,
-                                {{ $item->specialite }}, {{ $item->qualification }} )</td>
+                            <td>{{ $item->role_name }} :  ({{ $item->groupe }}  &nbsp;
+                                {{ $item->specialite }} &nbsp; {{ $item->qualification }} )</td>
                             <td>{{ $item->sexe }}</td>
                             <td>
                                 <a href="{{ route('user.edit', $item) }}" class="btn-sm btn btn-primary"
