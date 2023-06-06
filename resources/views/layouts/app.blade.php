@@ -57,7 +57,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('diagnostic.create') }}">
                     <i class='bx bx-dna' ></i>
                     <span class="links_name">Diagnostics</span>
                 </a>

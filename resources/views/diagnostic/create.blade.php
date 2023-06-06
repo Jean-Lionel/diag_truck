@@ -1,7 +1,7 @@
-{{--
-    @extends('layouts.app')
+ @extends('layouts.app')
 
-    @section('content')
-        diagnostic.create template
-    @endsection
---}}
+ @section('content')
+ <div class="row">
+    @livewire('diagnostique.diagnostic')
+</div>
+@endsection
