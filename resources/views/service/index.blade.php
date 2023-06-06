@@ -46,13 +46,13 @@
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <form class="form-delete" action="{{ route('service.destroy' , $item) }}" style="display: inline;" method="POST">
+                                {{-- <form class="form-delete" action="{{ route('service.destroy' , $item) }}" style="display: inline;" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         <button class="btn btn-outline-danger btn-sm delete_client" onclick="return confirm('Are you sure ? ')">
                              <i class="bi bi-trash" title="Supprimer"></i>
                             Supprimer</button>
-                    </form>
+                    </form> --}}
 
 
                             </td>
