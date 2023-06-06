@@ -26,13 +26,15 @@ class UserController extends Controller
 
     public function store(UserStoreRequest $request)
     {
-        dd($request->all());
         $user = User::create([
             'name' => $request->name,
             'lastName' => $request->lastName,
             'phone' => $request->phone,
             'sexe' => $request->sexe,
             'role_name' => $request->role_name,
+            'groupe' => $request->groupe,
+            'specialite' => $request->specialite,
+            'qualification' => $request->qualification,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

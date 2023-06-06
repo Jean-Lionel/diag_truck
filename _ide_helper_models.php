@@ -239,6 +239,9 @@ namespace App\Models{
  * @property string $password
  * @property string|null $remember_token
  * @property string|null $role_name
+ * @property string|null $qualification
+ * @property string|null $specialite
+ * @property string|null $groupe
  * @property string|null $specialite_Docteur
  * @property string|null $qualification_infirmier
  * @property int|null $statut
@@ -255,15 +258,18 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereGroupe($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereLastName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereQualification($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereQualificationInfirmier($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRoleName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSexe($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSpecialite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSpecialiteDocteur($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereStatut($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
