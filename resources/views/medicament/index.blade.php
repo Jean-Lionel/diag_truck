@@ -45,7 +45,7 @@
                     <form class="form-delete" action="{{ route('medicament.destroy' , $item) }}" style="display: inline;" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
-                        <button class="btn btn-outline-danger btn-sm delete_client">Supprimer</button>
+                        <button class="btn btn-outline-danger btn-sm delete_client" onclick="return confirm('Are you sure ? ')">Supprimer</button>
                     </form>
                 </td>
             </tr>

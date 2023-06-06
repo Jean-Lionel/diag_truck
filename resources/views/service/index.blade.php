@@ -46,10 +46,13 @@
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <a href="{{ route('service.destroy', $item) }}" title="Supprimer"
-                                    class="btn-sm btn btn-danger">
-                                    <i class="bi bi-trash" title="Supprimer"></i>
-                                </a>
+                                <form class="form-delete" action="{{ route('service.destroy' , $item) }}" style="display: inline;" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn btn-outline-danger btn-sm delete_client" onclick="return confirm('Are you sure ? ')">
+                             <i class="bi bi-trash" title="Supprimer"></i>
+                            Supprimer</button>
+                    </form>
 
 
                             </td>
