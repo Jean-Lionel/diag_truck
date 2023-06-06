@@ -8,11 +8,24 @@
                     form-control-sm" wire:keyup.enter="getPatient">
                 </div>
 
-            @if ($patient )
+                @if ($patient )
                 <div class="row">
-                    <h4 class="card-title">{{ $patient?->first_name }}</h4>
-                    <p class="card-text">{{ $patient?->last_name }}</p>
+
+                    <div class="col-4">Full Name</div>
+                    <div class="col-8">{{ $patient?->first_name }} {{ $patient?->last_name }}</div>
+                    <div class="col-4">Mobile</div>
+                    <div class="col-8">{{ $patient?->phone }}</div>
+                    <div class="col-4">Address</div>
+                    <div class="col-8">{{ $patient?->address }}</div>
+                    <div class="col-4">Date Of Birth</div>
+                    <div class="col-8">{{ $patient?->birthday }}</div>
+                    <div class="col-4">Age</div>
+                    <div class="col-8">{{ $patient?->birthday }}</div>
+                    <div class="col-6">Date de création</div>
+                    <div class="col-6">{{ $patient?->created_at }}</div>
                 </div>
+
+
                 @endif
             </div>
         </div>
