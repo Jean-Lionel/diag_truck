@@ -53,11 +53,11 @@
                                     title="Modifier">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
-
+{{--
                                 <a href="{{ route('user.edit', $item) }}" title="Supprimer"
                                     class="btn-sm btn btn-danger">
                                     <i class="bi bi-trash" title="Supprimer"></i>
-                                </a>
+                                </a> --}}
 
 
                             </td>

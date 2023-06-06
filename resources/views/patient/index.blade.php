@@ -63,10 +63,7 @@
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <a href="{{ route('patient.edit', $item) }}" title="Supprimer"
-                                    class="btn-sm btn btn-danger">
-                                    <i class="bi bi-trash" title="Supprimer"></i>
-                                </a>
+
 
 
                             </td>
@@ -79,69 +76,6 @@
             </table>
         </div>
     </div>
-    <div class="card-body">
-        <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th class="th-sm">#
-                    </th>
-                    <th class="th-sm">Patient ID
-                    </th>
-                    <th class="th-sm">Nom
-                    </th>
-                    <th class="th-sm">Prénom
-                    </th>
-                    <th class="th-sm">Date de  naissnace
-                    </th>
-                    <th class="th-sm">Adresse
-                    </th>
-                    <th class="th-sm">Téléphone
-                    </th>
-                    <th class="th-sm">Sexe
-                    </th>
-                    <th class="th-sm">Chef de Famille
-                    </th>
-                    <th class="th-sm">Action
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
 
-                @foreach ($patients as $item)
-                <tr>
-                    <td> {{ ++$loop->index }}</td>
-                    <td>{{ $item->patientId }}</td>
-                    <td>{{ $item->first_name }}</td>
-                    <td>{{ $item->last_name }}</td>
-                    <td>{{ $item->birthday }}</td>
-                    <td>{{ $item->address }}</td>
-                    <td>{{ $item->phone }}</td>
-                    <td>{{ $item->sexe }}</td>
-                    <td>{{ $item->chef_famille }}</td>
-                    <td>
-                        <a href="{{ route('patient.edit', $item) }}" class="btn-sm btn btn-primary"
-                        title="Modifier">
-                        <i class="bi bi-pencil-square"></i>
-                    </a>
-
-
-                    {{-- <form class="form-delete" action="{{ route('patient.destroy' , $item) }}" style="display: inline;" method="POST">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <button class="btn btn-outline-danger btn-sm delete_client" onclick="return confirm('Are you sure ? ')">
-                            <i class="bi bi-trash" title="Supprimer"></i>
-                            Supprimer</button>
-                        </form> --}}
-
-
-                    </td>
-                </tr>
-                @endforeach
-
-
-            </tbody>
-
-        </table>
-    </div>
 </div>
 @endsection
