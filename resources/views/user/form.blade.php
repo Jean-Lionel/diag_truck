@@ -84,9 +84,65 @@ $isUpdate ??= false;
                 </select>
 
             </div>
-            <div class="row
-            p-2">
-            <button type="submit"
-            class="btn btn-sm mt-4 btn-primary">{{ $isUpdate ? 'Modifier' : 'Enregistrer' }}</button>
+            <div class="col-md-6" id="show_infirmier">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Groupe</label>
+                        <select name="groupe" id="" class="form-control form-control-sm">
+                            <option value=""></option>
+                            <option value="GROUPE I">GROUPE I</option>
+                            <option value="GROUPE II">GROUPE II</option>
+                            <option value="GROUPE III">GROUPE III</option>
+                            <option value="GROUPE IV">GROUPE IV</option>
+                            <option value="GROUPE V">GROUPE V</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="Qualification">Qualification</label>
+                        <select name="qualification" id="Qualification" class="form-control form-control-sm">
+                            <option value=""></option>
+                            <option value="Infirmier Specialisé">Infirmier Specialisé</option>
+                            <option value="Infirmier Généraliste">Infirmier Généraliste</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="show_docteur">
+                <label for="">Specialité</label>
+                <select name="specialite" id="" class="form-control form-control-sm">
+                    <option value=""></option>
+                    <option value="Généraliste">Généraliste</option>
+                    <option value="Pédiatrie">Pédiatrie</option>
+                </select>
+
+            </div>
+                <div class="row
+                p-2">
+                <button type="submit"
+                class="btn btn-sm mt-4 btn-primary">{{ $isUpdate ? 'Modifier' : 'Enregistrer' }}</button>
+            </div>
         </div>
-    </div>
+
+
+        @section("scripts")
+        <script>
+            $('#show_infirmier').hide();
+            $('#show_docteur').hide();
+            $('#role_name').on('change', function(e){
+                if(e.target.value   == 'INFIRMIER'){
+                    $('#show_infirmier').show();
+                    $('#show_docteur').hide();
+                }else if(e.target.value == 'DOCTEUR'){
+                    $('#show_infirmier').hide();
+                    $('#show_docteur').show();
+                }else{
+                    $('#show_infirmier').hide();
+                    $('#show_docteur').hide();
+                }
+            })
+        </script>
+
+        @stop
+
+
+
