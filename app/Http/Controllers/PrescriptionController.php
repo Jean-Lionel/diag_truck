@@ -27,7 +27,7 @@ class PrescriptionController extends Controller
     {
         $prescription = Prescription::create($request->validated());
 
-       session()->flash('prescription.id', $prescription->id);
+        session()->flash('prescription.id', $prescription->id);
 
         return redirect()->route('prescription.index');
     }

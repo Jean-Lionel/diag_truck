@@ -63,7 +63,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('prescription.create') }}">
                     <i class='bx bx-edit' ></i>
                     <span class="links_name">Prescriptions</span>
                 </a>
