@@ -15,12 +15,10 @@ class Diagnostic extends Component
     {
         return view('livewire.diagnostique.diagnostic');
     }
-
     public function getPatient()
     {
-        $this->patient = Patient::where('id', $this->numeroPatient)->first()->get();
+        $this->patient = Patient::where('id', $this->numeroPatient)->first();
     }
-
     public function saveDiagnostique()
     {
         Diagnostic::create([
