@@ -20,6 +20,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
     protected $fillable = [
         'name',
         'lastName',
@@ -27,7 +28,10 @@ class User extends Authenticatable
         'sexe',
         'email',
         'password',
+        'groupe',
         'role_name',
+        'specialite',
+        'qualification',
         'groupe',
         'specialite_Docteur',
         'qualification_infirmier',
@@ -54,13 +58,16 @@ class User extends Authenticatable
 
     // 	Page ya login ikoresha bose: docteur, infirmier,administrateur
 
-    public function isAdmin(){
+    public function isAdmin()
+    {
         return $this->role_name == 'ADMIN';
     }
-    public function isDocteur(){
+    public function isDocteur()
+    {
         return $this->role_name == 'DOCTEUR';
     }
-    public function isInfirmier(){
+    public function isInfirmier()
+    {
         return $this->role_name == 'INFIMIER';
     }
 }
