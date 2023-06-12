@@ -26,7 +26,9 @@ class Diagnostic extends Component
     }
     public function saveDiagnostique()
     {
-
+        $this->validate([
+            'contenu' => 'required'
+        ]);
         \App\Models\Diagnostic::create([
             'patient_id' => $this->patient->id,
             'docteur_id' => auth()->user()->id,
