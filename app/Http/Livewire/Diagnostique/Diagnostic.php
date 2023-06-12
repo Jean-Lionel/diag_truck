@@ -11,6 +11,7 @@ class Diagnostic extends Component
     public $patient;
     public $diagnostique;
     public $contenu;
+    public $diagnosctic_history;
     public function render()
     {
         return view('livewire.diagnostique.diagnostic');
@@ -18,6 +19,8 @@ class Diagnostic extends Component
     public function getPatient()
     {
         $this->patient = Patient::where('id', $this->numeroPatient)->first();
+
+        $this->diagnosctic_history = \App\Models\Diagnostic::where('patient_id', $this->patient?->id)->take(50)->latest()->get();
     }
     public function saveDiagnostique()
     {

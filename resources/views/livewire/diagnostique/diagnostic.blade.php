@@ -34,4 +34,23 @@
     <div class="col-md-2">
         <button class="btn btn-primary" wire:click="saveDiagnostique">Enregistrer</button>
     </div>
+
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                @if($diagnosctic_history)
+                <li><h4>Diagnostic recent</h4></li>
+                @foreach ($diagnosctic_history as $diagnostic)
+                    <li>{{ $diagnostic->contenu }}
+
+                        {{ $diagnostic->created_at }}
+
+                    </li>
+                @endforeach
+                @endif
+            </ul>
+
+        </div>
+        <div class="col-6"></div>
+    </div>
 </div>
