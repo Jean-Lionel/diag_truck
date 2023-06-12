@@ -19,7 +19,9 @@ class Diagnostic extends Component
     public function getPatient()
     {
         $this->patient = Patient::where('id', $this->numeroPatient)->first();
-
+        $this->updateDiagnostic();
+    }
+    private function updateDiagnostic(){
         $this->diagnosctic_history = \App\Models\Diagnostic::where('patient_id', $this->patient?->id)->take(50)->latest()->get();
     }
     public function saveDiagnostique()
@@ -32,6 +34,7 @@ class Diagnostic extends Component
             'date_diag' => date('Y-m-d H:i:s'),
         ]);
         $this->contenu = "";
+        $this->updateDiagnostic();
 
     }
 }

@@ -39,12 +39,11 @@
         <div class="col-6">
             <ul>
                 @if($diagnosctic_history)
-                <li><h4>Diagnostic recent</h4></li>
+                <h4>Diagnostic recent</h4>
                 @foreach ($diagnosctic_history as $diagnostic)
-                    <li>{{ $diagnostic->contenu }}
-
+                    <li>
+                        {{ $diagnostic->contenu }}
                         {{ $diagnostic->created_at }}
-
                     </li>
                 @endforeach
                 @endif
