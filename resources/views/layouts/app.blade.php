@@ -28,7 +28,7 @@
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="#" class="active">
+                    <a href="/" class="active">
                         <i class='bx bx-grid-alt'></i>
                         <span class="links_name">Tableau De Bord</span>
                     </a>
@@ -59,7 +59,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('diagnostic.index') }}">
                         <i class='bx bx-dna'></i>
                         <span class="links_name">Diagnostics</span>
                     </a>
