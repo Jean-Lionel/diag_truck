@@ -18,9 +18,7 @@
     </head>
 
     <body>
-        <style>
 
-        </style>
         <div class="sidebar">
             <div class="logo-details">
                 <i class='bx bxl-plus-medical'></i>
@@ -125,12 +123,10 @@
             </nav>
 
             <div class="home-content">
-
-                @yield('content')
+                <div class="container-fluid">
+                    @yield('content')
+                </div>
             </div>
-
-
-
         </section>
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

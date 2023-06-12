@@ -21,11 +21,14 @@ class Diagnostic extends Component
     }
     public function saveDiagnostique()
     {
-        Diagnostic::create([
+
+        \App\Models\Diagnostic::create([
             'patient_id' => $this->patient->id,
             'docteur_id' => auth()->user()->id,
             'contenu' => $this->contenu,
             'date_diag' => date('Y-m-d H:i:s'),
         ]);
+        $this->contenu = "";
+
     }
 }

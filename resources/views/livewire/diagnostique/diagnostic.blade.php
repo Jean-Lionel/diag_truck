@@ -24,13 +24,14 @@
                     <div class="col-6">Date de création</div>
                     <div class="col-6">{{ $patient?->created_at }}</div>
                 </div>
-
-
                 @endif
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <textarea name="" wire:model="contenu" class="form-control form-control-sm" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary" wire:click="saveDiagnostique">Enregistrer</button>
     </div>
 </div>
