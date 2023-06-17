@@ -33,13 +33,18 @@
                     </a>
                 </li>
 
-                @canany(['is-infirmier', 'is-admin'])
+                @canany(['is-infirmier', 'is-docteur', 'is-admin'])
+
+                @cannot('is-docteur')
                 <li>
                     <a href="{{ route('patient.index') }}">
                         <i class='bx bx-accessibility'></i>
                         <span class="links_name">Patients</span>
                     </a>
                 </li>
+
+                @endcannot
+
                 <li>
                     <a href="{{ route('assignation.index') }}">
                         <i class='bx bx-box'></i>
@@ -50,12 +55,7 @@
                 @endcanany
 
                 @canany(['is-docteur', 'is-admin'])
-                <li>
-                    <a href="{{ route('user.index') }}">
-                        <i class='bx bx-user-plus'></i>
-                        <span class="links_name">Personnels</span>
-                    </a>
-                </li>
+
 
                 <li>
                     <a href="{{ route('medicament.index') }}">
@@ -75,12 +75,22 @@
                         <span class="links_name">Prescriptions</span>
                     </a>
                 </li>
+                @can('is-admin')
+                <li>
+                    <a href="{{ route('user.index') }}">
+                        <i class='bx bx-user-plus'></i>
+                        <span class="links_name">Personnels</span>
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('service.index') }}">
                         <i class='bx bx-list-ul'></i>
                         <span class="links_name">Services</span>
                     </a>
                 </li>
+
+                @endcan
+
                 <li>
                     <a href="#">
                         <i class='bx bx-message'></i>
@@ -129,7 +139,10 @@
                 </div> --}}
                 <div class="profile-details">
                     <img src="images/profile.jpg" alt="">
-                    <span class="admin_name">Prem Shahi</span>
+                    <span class="admin_name">
+                        {{ auth()->user()->name }}
+                        {{ auth()->user()->lastName }}
+                    </span>
                     {{-- <i class='bx bx-chevron-down'></i> --}}
                 </div>
             </nav>

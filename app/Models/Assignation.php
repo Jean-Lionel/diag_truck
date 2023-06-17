@@ -46,11 +46,11 @@ class Assignation extends Model
 
     public function infirmier(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'infirmier_id', 'id');
     }
 
     public function docteur(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class , 'docteur_id', 'id');
     }
 }

@@ -13,7 +13,7 @@ class AssignationController extends Controller
 {
     public function index(Request $request): View
     {
-        $assignations = Assignation::latest()->get();
+        $assignations = Assignation::where('docteur_id',  auth()->user()->id)->get();
 
         return view('assignation.index', compact('assignations'));
     }
