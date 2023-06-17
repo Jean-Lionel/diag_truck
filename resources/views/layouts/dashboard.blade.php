@@ -37,19 +37,19 @@
        <div class="top_cards">
             <div class="card">
                 <h3>Patients</h3>
-                <h3>200</h3>
+                <h3>{{ $patient_total }}</h3>
             </div>
             <div class="card">
-                <h3>Dossiers</h3>
-                <h3>200</h3>
+                <h3>Service</h3>
+                <h3>{{ $services->count() }}</h3>
             </div>
             <div class="card">
                 <h3>Assignations</h3>
-                <h3>200</h3>
+                <h3>{{ $assignation_total }}</h3>
             </div>
             <div class="card">
                 <h3>Prescriptions</h3>
-                <h3>200</h3>
+                <h3>{{ $prescription_total }}</h3>
             </div>
        </div>
        <div class="bar">
@@ -66,8 +66,7 @@
                         </th>
                         <th class="th-sm">Prénom
                         </th>
-                        <th class="th-sm">Telephone
-                        </th>
+
                         <th class="th-sm">Email
                         </th>
                         <th class="th-sm">Role
@@ -75,41 +74,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                           <td>1</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                        </tr>
-                        <tr>
-                           <td>1</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                        </tr>
-                        <tr>
-                           <td>1</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                        </tr>
-                        <tr>
-                           <td>1</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                        </tr>
 
+                    @foreach ($users as $user )
+                    <tr>
+                        <td>{{ ++$loop->index  }}</td>
+                        <td>{{ $user->lastName }}</td>
+                        <td>{{ $user->name }}</td>
 
+                        <td>{{ $user->email }}</td>
 
+                        <td>{{ $user->role_name }}</td>
+                    </tr>
+                    @endforeach
                 </tbody>
 
             </table>
@@ -134,12 +110,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                           <td>1</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                           <td>asdasdsad</td>
-                        </tr>
+
+                    @foreach ($services as $service)
+                    <tr>
+                        <td>{{ $loop->index }}</td>
+                        <td>{{ $service->name }}</td>
+                        <td>{{ $service->description }}</td>
+                       <td></td>
+                    </tr>
+
+                    @endforeach
+
 
 
                 </tbody>

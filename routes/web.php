@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', function () {
-        return view('layouts.dashboard');
-    });
+    Route::get('/',[App\Http\Controllers\HomeController::class, 'dashboard']);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('patient', App\Http\Controllers\PatientController::class);
     Route::resource('service', App\Http\Controllers\ServiceController::class);
