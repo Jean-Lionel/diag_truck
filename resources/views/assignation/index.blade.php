@@ -45,7 +45,7 @@
                             <td>{{ $item->patient?->last_name }}</td>
                             <td>{{ $item->patient?->birthday }}</td>
                             <td>{{ $item->patient?->sexe }}</td>
-                            <th>Dr {{ $item->infirmier?->name }}</th>
+                            <th>Dr {{ $item->infirmier?->name }} {{ $item->infirmier?->specialite }}</th>
                             <td>{{  $item->created_at}}</td>
                         </tr>
                     @endforeach

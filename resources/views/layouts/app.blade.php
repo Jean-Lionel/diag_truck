@@ -19,6 +19,7 @@
 
     <body>
 
+
         <div class="sidebar">
             <div class="logo-details">
                 <i class='bx bxl-plus-medical'></i>
@@ -31,17 +32,12 @@
                         <span class="links_name">Tableau De Bord</span>
                     </a>
                 </li>
+
+                @canany(['is-infirmier', 'is-admin'])
                 <li>
                     <a href="{{ route('patient.index') }}">
                         <i class='bx bx-accessibility'></i>
                         <span class="links_name">Patients</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('user.index') }}">
-                        <i class='bx bx-user-plus'></i>
-                        <span class="links_name">Personnels</span>
                     </a>
                 </li>
                 <li>
@@ -50,6 +46,17 @@
                         <span class="links_name">Assignation</span>
                     </a>
                 </li>
+
+                @endcanany
+
+                @canany(['is-docteur', 'is-admin'])
+                <li>
+                    <a href="{{ route('user.index') }}">
+                        <i class='bx bx-user-plus'></i>
+                        <span class="links_name">Personnels</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="{{ route('medicament.index') }}">
                         <i class='bx bx-capsule'></i>
@@ -80,6 +87,11 @@
                         <span class="links_name">Dossiers Medicals</span>
                     </a>
                 </li>
+
+                @endcanany
+
+
+
                 {{-- <li>
                     <a href="#">
                         <i class='bx bx-heart'></i>
