@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PrescriptionStoreRequest;
 use App\Http\Requests\PrescriptionUpdateRequest;
 use App\Models\Prescription;
+use App\Models\Patient;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -32,9 +33,11 @@ class PrescriptionController extends Controller
         return redirect()->route('prescription.index');
     }
 
-    public function show(Request $request, Prescription $prescription): View
+    public function show(Request $request,  $patient_id): View
     {
-        return view('prescription.show', compact('prescription'));
+        $patient = Patient::find($patient_id);
+
+        return view('prescription.show', compact('patient'));
     }
 
     public function edit(Request $request, Prescription $prescription): View

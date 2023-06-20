@@ -28,5 +28,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('prescription', App\Http\Controllers\PrescriptionController::class);
     Route::resource('role', App\Http\Controllers\RoleController::class);
     Route::resource('user', App\Http\Controllers\UserController::class);
+
 });
 ;

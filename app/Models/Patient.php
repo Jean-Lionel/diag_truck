@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Carbon\Carbon;
 
 /**
  * @mixin IdeHelperPatient
@@ -44,5 +44,12 @@ class Patient extends Model
     public function getPatientIdAttribute()
     {
         return "A" . str_pad($this->id, 5, "0", STR_PAD_LEFT);
+    }
+
+    public function getFullNameAttribute(){
+        return $this->first_name . " ". $this->last_name;
+    }
+    public function getAgeAttribute(){
+        return Carbon::parse($this->birthday)->age . " years old";
     }
 }
