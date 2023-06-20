@@ -42,10 +42,8 @@
                 <h4>Diagnostic recent</h4>
                 @foreach ($diagnosctic_history as $diagnostic)
                     <li class="d-flex p-2 bd-highlight">
-
                         <div>{{ $diagnostic->created_at }}</div>
                         <div>{!! nl2br($diagnostic->contenu) !!}</div>
-
                     </li>
                 @endforeach
                 @endif
