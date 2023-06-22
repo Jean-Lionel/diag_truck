@@ -54,7 +54,7 @@
 
                 @endcanany
 
-                @canany(['is-docteur', 'is-admin'])
+                @canany([ 'is-admin'])
 
 
                 <li>

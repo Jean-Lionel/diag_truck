@@ -41,6 +41,10 @@ class Patient extends Model
         'birthday' => 'datetime',
     ];
 
+    public function diagnostics(){
+        return $this->hasMany(Diagnostic::class);
+    }
+
     public function getPatientIdAttribute()
     {
         return "A" . str_pad($this->id, 5, "0", STR_PAD_LEFT);

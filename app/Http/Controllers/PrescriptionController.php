@@ -37,6 +37,8 @@ class PrescriptionController extends Controller
     {
         $patient = Patient::find($patient_id);
 
+
+
         return view('prescription.show', compact('patient'));
     }
 

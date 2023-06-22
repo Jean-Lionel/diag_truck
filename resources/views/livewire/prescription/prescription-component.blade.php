@@ -1,10 +1,6 @@
 <div>
     {{-- Do your work, then step back. --}}
-
    <div class="row">
-
-
-
    <div class="col-12">
         <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
