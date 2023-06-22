@@ -22,6 +22,7 @@ class Prescription extends Model
         'diag_id',
         'med_id',
         'dose',
+        'patient_id',
     ];
 
     /**
@@ -40,8 +41,8 @@ class Prescription extends Model
         return $this->belongsTo(Diagnostic::class);
     }
 
-    public function med(): BelongsTo
+    public function medicament(): BelongsTo
     {
-        return $this->belongsTo(Medicament::class);
+        return $this->belongsTo(Medicament::class , 'med_id');
     }
 }

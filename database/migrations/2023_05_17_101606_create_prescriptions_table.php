@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('prescriptions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('diag_id')->constrained('Diagnostics');
+            $table->foreignId('patient_id')->nullable();
             $table->foreignId('med_id')->constrained('Medicaments');
             $table->string('dose');
             $table->timestamps();

@@ -20,11 +20,10 @@
         <div class="card">
 
             <div class="row">
-                <div class="col-md-10">
+
+                <div class="col-md-12 text-right">
                     <h4 class="m-2">Prescription</h4>
-                </div>
-                <div class="col-md-2 text-right">
-                    <button class="btn btn-sm btn-info">Ajouter</button>
+                    @livewire('prescription.add-prescription', ['patientId' => $patient->id])
                 </div>
             </div>
 
