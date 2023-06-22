@@ -10,6 +10,7 @@
                 <a href="{{ route('patient.create') }}" type="button" class="btn btn-primary btn-block">
                     <i class="bi bi-plus-circle"></i> Ajouter
                 </a>
+                
             </div>
         </div>
         <div class="card-body">
@@ -24,7 +25,7 @@
                         </th>
                         <th class="th-sm">Prénom
                         </th>
-                        <th class="th-sm">Date de  naissnace
+                        <th class="th-sm">Age
                         </th>
                         <th class="th-sm">Adresse
                         </th>
@@ -42,6 +43,7 @@
                         </th>
                     </tr>
                 </thead>
+                
                 <tbody>
 
                     @foreach ($patients as $item)
@@ -50,7 +52,7 @@
                             <td>{{ $item->patientId }}</td>
                             <td>{{ $item->first_name }}</td>
                             <td>{{ $item->last_name }}</td>
-                            <td>{{ $item->birthday }}</td>
+                            <td>{{ $item->age }}</td>
                             <td>{{ $item->address }}</td>
                             <td>{{ $item->phone }}</td>
                             <td>{{ $item->sexe }}</td>

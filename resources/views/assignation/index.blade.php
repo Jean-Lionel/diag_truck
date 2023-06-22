@@ -29,7 +29,7 @@
                     </th>
                     <th class="th-sm">Prénom
                     </th>
-                    <th class="th-sm">Date de  naissnace
+                    <th class="th-sm">Date de naissance
                     </th>
                     <th class="th-sm">Sexe
                     </th>
