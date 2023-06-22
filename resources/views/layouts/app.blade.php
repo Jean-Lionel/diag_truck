@@ -56,13 +56,16 @@
 
                 @canany([ 'is-admin'])
 
-
+                @cannot('is-docteur')
                 <li>
                     <a href="{{ route('medicament.index') }}">
                         <i class='bx bx-capsule'></i>
                         <span class="links_name">Medicament</span>
                     </a>
                 </li>
+
+                @endcannot
+
                 <li>
                     <a href="{{ route('diagnostic.index') }}">
                         <i class='bx bx-dna'></i>
