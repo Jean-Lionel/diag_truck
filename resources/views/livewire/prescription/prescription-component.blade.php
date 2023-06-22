@@ -1,10 +1,6 @@
 <div>
     {{-- Do your work, then step back. --}}
-
    <div class="row">
-
-
-
    <div class="col-12">
     <table>
         <thead>
