@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use App\Models\Prescription;
 
 /**
  * @mixin IdeHelperPatient
@@ -41,6 +42,9 @@ class Patient extends Model
         'birthday' => 'datetime',
     ];
 
+    public function prescriptions(){
+        return $this->hasMany(Prescription::class);
+    }
     public function diagnostics(){
         return $this->hasMany(Diagnostic::class);
     }

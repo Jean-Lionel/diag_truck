@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PatientStoreRequest;
 use App\Http\Requests\PatientUpdateRequest;
 use App\Models\Patient;
+use App\Models\Prescription;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -40,6 +41,7 @@ class PatientController extends Controller
     public function show(Request $request, Patient $patient)
     {
        // dd($patient);
+      //  $prescriptions = Prescription::where('patient_id', $patient->id)->get();
         return view('patient.show', compact('patient'));
     }
 

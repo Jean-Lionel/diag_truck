@@ -31,6 +31,22 @@
     </div>
     <div class="col-md-6">
         <div class="card">
+            <ul>
+                @foreach ($patient->prescriptions as $prescription)
+                <li class="d-flex">
+                    <div>
+                        <h1>Date</h1>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ol>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
 
         </div>
     </div>
