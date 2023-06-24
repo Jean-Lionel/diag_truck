@@ -16,10 +16,7 @@
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
     </head>
-
     <body>
-
-
         <div class="sidebar">
             <div class="logo-details">
                 <i class='bx bxl-plus-medical'></i>
@@ -35,15 +32,12 @@
 
                 @canany(['is-infirmier', 'is-docteur', 'is-admin'])
 
-                @cannot('is-docteur')
                 <li>
                     <a href="{{ route('patient.index') }}">
                         <i class='bx bx-accessibility'></i>
                         <span class="links_name">Patients</span>
                     </a>
                 </li>
-
-                @endcannot
 
                 <li>
                     <a href="{{ route('assignation.index') }}">
@@ -63,9 +57,7 @@
                         <span class="links_name">Medicament</span>
                     </a>
                 </li>
-
                 @endcannot
-
                 <li>
                     <a href="{{ route('diagnostic.index') }}">
                         <i class='bx bx-dna'></i>
@@ -91,20 +83,14 @@
                         <span class="links_name">Services</span>
                     </a>
                 </li>
-
                 @endcan
-
                 <li>
                     <a href="#">
                         <i class='bx bx-message'></i>
                         <span class="links_name">Dossiers Medicals</span>
                     </a>
                 </li>
-
                 @endcanany
-
-
-
                 {{-- <li>
                     <a href="#">
                         <i class='bx bx-heart'></i>

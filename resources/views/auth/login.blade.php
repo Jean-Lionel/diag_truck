@@ -14,8 +14,9 @@
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
-                width: 800px;
+                width: 100%;
             }
+
 
             .card {
                 width: 100%;
