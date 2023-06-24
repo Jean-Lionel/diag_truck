@@ -28,6 +28,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('prescription', App\Http\Controllers\PrescriptionController::class);
     Route::resource('role', App\Http\Controllers\RoleController::class);
     Route::resource('user', App\Http\Controllers\UserController::class);
+    Route::get('dossier_medical', [App\Http\Controllers\PatientController::class , 'dossier_medical'])->name('dossier_medical');
 
 });
-;

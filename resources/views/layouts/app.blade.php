@@ -85,7 +85,7 @@
                 </li>
                 @endcan
                 <li>
-                    <a href="#">
+                    <a href="{{ route('dossier_medical') }}">
                         <i class='bx bx-message'></i>
                         <span class="links_name">Dossiers Medicals</span>
                     </a>
