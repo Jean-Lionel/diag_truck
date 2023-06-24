@@ -39,6 +39,7 @@ class PatientController extends Controller
 
     public function show(Request $request, Patient $patient)
     {
+       // dd($patient);
         return view('patient.show', compact('patient'));
     }
 
