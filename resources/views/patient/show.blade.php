@@ -2,6 +2,13 @@
 
 @section('content')
 
+<style>
+    .line{
+        border-left: 3px solid #ababab;
+        margin:  0 0 30px 30px;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-4">
         <div class="card p-4">
@@ -30,18 +37,20 @@
         </div>
     </div>
     <div class="col-md-6">
-        <div class="card">
+        <div class="card p-4">
+            <h3>Les derniers prescriptions</h3>
             <ul>
-                @foreach ($patient->prescriptions as $prescription)
+                @foreach ($prescriptions as $key => $prescription)
                 <li class="d-flex">
                     <div>
-                        <h1>Date</h1>
+                        <b>{{  $key}}</b>
                     </div>
-                    <div>
-                        <ol>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                    <div class="line">
+                        <ol >
+                            @foreach ($prescription as $item)
+                            <li>{{ $item?->medicament?->name }}</li>
+                            @endforeach
+
                         </ol>
                     </div>
                 </li>

@@ -40,9 +40,13 @@ class PatientController extends Controller
 
     public function show(Request $request, Patient $patient)
     {
-       // dd($patient);
-      //  $prescriptions = Prescription::where('patient_id', $patient->id)->get();
-        return view('patient.show', compact('patient'));
+       // dd($patient); groupBy('browser')
+       $prescriptions = Prescription::where('patient_id', $patient->id)
+                            ->get()->keyBy('created_at')->groupBy(function ($item) {
+                return $item->created_at->format('Y-m-d');
+            });
+        //dump($prescriptions);
+        return view('patient.show', compact('patient', 'prescriptions'));
     }
 
     public function edit(Request $request, Patient $patient)

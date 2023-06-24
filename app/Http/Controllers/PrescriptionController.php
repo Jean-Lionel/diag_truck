@@ -36,9 +36,6 @@ class PrescriptionController extends Controller
     public function show(Request $request,  $patient_id): View
     {
         $patient = Patient::find($patient_id);
-
-
-
         return view('prescription.show', compact('patient'));
     }
 
