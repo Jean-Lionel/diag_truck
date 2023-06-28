@@ -97,7 +97,7 @@
                 </a>
             </li>
             @endcanany
-            @canany(['is-admin','is-infirmier', 'is-docteur'])
+            @canany(['is-admin', 'is-docteur'])
             <li>
                 <a href="{{ route('dossier_medical') }}" class="{{ setActive('dossier_medical') }} ">
                     <i class='bx bx-message'></i>
