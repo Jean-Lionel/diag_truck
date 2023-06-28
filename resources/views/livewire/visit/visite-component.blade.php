@@ -41,7 +41,7 @@
                     {{ $patient->first_name  }}
                     {{ $patient->last_name  }}
                 </h1>
-                <h1>Age : </h1>
+                <h1>Age : {{ $patient->age}} </h1>
                 <h1 class="display-3">
                   N° :  {{ $patient->patientId  }}
                 </h1>

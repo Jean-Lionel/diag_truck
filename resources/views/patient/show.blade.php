@@ -38,6 +38,23 @@
     </div>
     <div class="col-md-6">
         <div class="card p-4">
+            <h3>Les derniers Diagnostique</h3>
+            <ul>
+                @foreach ($diagnostics as $key => $diagnostic)
+                <li class="d-flex">
+                    <div>
+                        <b>{{  $key}}</b>
+                    </div>
+                    <div class="line">
+                        <ol >
+                            @foreach ($diagnostic as $item)
+                            <li>{{ $item?->contenu }}</li>
+                            @endforeach
+                        </ol>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
             <h3>Les derniers prescriptions</h3>
             <ul>
                 @foreach ($prescriptions as $key => $prescription)
@@ -50,7 +67,6 @@
                             @foreach ($prescription as $item)
                             <li>{{ $item?->medicament?->name }}</li>
                             @endforeach
-
                         </ol>
                     </div>
                 </li>

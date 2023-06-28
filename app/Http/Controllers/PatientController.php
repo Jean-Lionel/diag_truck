@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PatientStoreRequest;
 use App\Http\Requests\PatientUpdateRequest;
 use App\Models\Patient;
+use App\Models\Diagnostic;
 use App\Models\Prescription;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -45,8 +46,12 @@ class PatientController extends Controller
                             ->get()->keyBy('created_at')->groupBy(function ($item) {
                 return $item->created_at->format('Y-m-d');
             });
+
+        $diagnostics = Diagnostic::where('patient_id', $patient->id)->get()->keyBy('created_at')->groupBy(function ($item) {
+            return $item->created_at->format('Y-m-d');
+        });
         //dump($prescriptions);
-        return view('patient.show', compact('patient', 'prescriptions'));
+        return view('patient.show', compact('patient', 'prescriptions', 'diagnostics'));
     }
 
     public function edit(Request $request, Patient $patient)
