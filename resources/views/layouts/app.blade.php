@@ -15,6 +15,12 @@
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
+
+        <style>
+            .active{
+                background: #1A0101 !important;
+            }
+        </style>
     </head>
     <body>
         <div class="sidebar">
@@ -24,7 +30,7 @@
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="/" class="active">
+                    <a href="/" >
                         <i class='bx bx-grid-alt'></i>
                         <span class="links_name">Tableau De Bord</span>
                     </a>
@@ -32,15 +38,16 @@
 
                 @canany(['is-infirmier', 'is-docteur', 'is-admin'])
 
+
                 <li>
-                    <a href="{{ route('patient.index') }}">
-                        <i class='bx bx-accessibility'></i>
+                    <a href="{{ route('patient.index') }}" class="{{ setActive('patient') }} ">
+                        <i class='bx bx-accessibility '></i>
                         <span class="links_name">Patients</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('assignation.index') }}">
+                    <a href="{{ route('assignation.index') }}" class="{{ setActive('assignation') }} ">
                         <i class='bx bx-box'></i>
                         <span class="links_name">Assignation</span>
                     </a>
@@ -52,40 +59,40 @@
 
                 @cannot('is-docteur')
                 <li>
-                    <a href="{{ route('medicament.index') }}">
+                    <a href="{{ route('medicament.index') }}" class="{{ setActive('medicament') }} ">
                         <i class='bx bx-capsule'></i>
                         <span class="links_name">Medicament</span>
                     </a>
                 </li>
                 @endcannot
                 <li>
-                    <a href="{{ route('diagnostic.index') }}">
+                    <a href="{{ route('diagnostic.index') }}" class="{{ setActive('diagnostic') }} ">
                         <i class='bx bx-dna'></i>
                         <span class="links_name">Diagnostics</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('prescription.index') }}">
+                    <a href="{{ route('prescription.index') }}" class="{{ setActive('prescription') }} ">
                         <i class='bx bx-edit'></i>
                         <span class="links_name">Prescriptions</span>
                     </a>
                 </li>
                 @can('is-admin')
                 <li>
-                    <a href="{{ route('user.index') }}">
+                    <a href="{{ route('user.index') }}" class="{{ setActive('user') }} ">
                         <i class='bx bx-user-plus'></i>
                         <span class="links_name">Personnels</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('service.index') }}">
+                    <a href="{{ route('service.index') }}" class="{{ setActive('service') }} ">
                         <i class='bx bx-list-ul'></i>
                         <span class="links_name">Services</span>
                     </a>
                 </li>
                 @endcan
                 <li>
-                    <a href="{{ route('dossier_medical') }}">
+                    <a href="{{ route('dossier_medical') }}" class="{{ setActive('dossier_medical') }} ">
                         <i class='bx bx-message'></i>
                         <span class="links_name">Dossiers Medicals</span>
                     </a>
