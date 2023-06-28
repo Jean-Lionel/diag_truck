@@ -68,6 +68,6 @@ class User extends Authenticatable
     }
     public function isInfirmier()
     {
-        return $this->role_name == 'INFIMIER';
+        return $this->role_name == 'INFIRMIER';
     }
 }
