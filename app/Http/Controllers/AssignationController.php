@@ -15,7 +15,7 @@ class AssignationController extends Controller
     {
         $assignations = Assignation::where('docteur_id',  auth()->user()->id)->latest()->get();
 
-        if(auth()->user()->isAdmin()){
+        if(auth()->user()->isAdmin() || auth()->user()->isInfirmier()){
             $assignations = Assignation::latest()->get();
 
         }
