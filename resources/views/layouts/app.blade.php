@@ -29,7 +29,7 @@
             <span class="logo_name">DIAGTRACK</span>
         </div>
         <ul class="nav-links">
-             @canany(['is-admin','is-docteur'])
+             @canany(['is-admin'])
             <li>
                 <a href="/" >
                     <i class='bx bx-grid-alt'></i>
