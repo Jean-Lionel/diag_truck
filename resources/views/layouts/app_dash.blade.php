@@ -23,7 +23,7 @@
         <li>
           <a href="#" class="active">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Tableau De Bord</span>
+            <span class="links_name">DIAGTRACK v1:06.2023</span>
           </a>
         </li>
         <li>

@@ -18,6 +18,13 @@ class HomeController extends Controller
         $assignation_total = Assignation::all()->count();
         $prescription_total = Prescription::all()->count();
 
+        if(auth()->user()->isInfirmier()  ){
+            return redirect()->to('patient');
+        }
+        if(auth()->user()->isDocteur()  ){
+            return redirect()->to('assignation');
+        }
+
         return view('layouts.dashboard', compact('users', 'services', 'patient_total', 'assignation_total', 'prescription_total'));
     }
     /**
