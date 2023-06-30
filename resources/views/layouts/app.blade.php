@@ -29,12 +29,14 @@
             <span class="logo_name">DIAGTRACK</span>
         </div>
         <ul class="nav-links">
+             @canany(['is-admin','is-docteur'])
             <li>
                 <a href="/" >
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Tableau De Bord</span>
                 </a>
             </li>
+            @endcanany
 
             @canany(['is-admin','is-infirmier'])
             <li>
