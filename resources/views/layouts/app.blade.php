@@ -33,7 +33,7 @@
             <li>
                 <a href="/" >
                     <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">DIAGTRACK v1:06.2023</span>
+                    <span class="links_name">Tableau De Bord</span>
                 </a>
             </li>
             @endcanany
@@ -137,7 +137,7 @@
     <nav>
         <div class="sidebar-button">
             <i class='bx bx-menu sidebarBtn'></i>
-            <span class="dashboard">Tableau De Bord</span>
+            <span class="dashboard">DIAGTRACK v1:06.2023</span>
         </div>
         {{-- <div class="search-box">
             <input type="text" placeholder="Recherche...">
