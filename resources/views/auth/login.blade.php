@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>DIAGTRACK</title>
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         <style>
@@ -66,7 +66,7 @@
                                 @csrf
 
                                 <div class="row mb-3">
-                                    <label for="email" class="">{{ __('Email Address') }}</label>
+                                    <label for="email" class="">{{ __('Adresse Email') }}</label>
 
                                     <div class="col-md-12">
                                         <input id="email" type="email"
@@ -82,7 +82,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="password" class="">{{ __('Password') }}</label>
+                                    <label for="password" class="">{{ __('Mot De Passe') }}</label>
 
                                     <div class="col-md-12">
                                         <input id="password" type="password"
@@ -98,13 +98,13 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <div class="col-md-6 offset-md-4">
+                                    <div class="col-md-8 offset-md-2">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember"
                                                 id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                             <label class="form-check-label" for="remember">
-                                                {{ __('Remember Me') }}
+                                                {{ __('Se Souvenir De Moi') }}
                                             </label>
                                         </div>
                                     </div>

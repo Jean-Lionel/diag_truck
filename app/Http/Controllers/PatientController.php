@@ -13,9 +13,9 @@ use Illuminate\View\View;
 
 class PatientController extends Controller
 {
-    public function dossier_medical(){
+    public function fiche_medicale(){
         $patients = Patient::all();
-        return view('patient.dossier_medical', compact('patients'));
+        return view('patient.fiche_medicale', compact('patients'));
     }
     public function index(Request $request)
     {

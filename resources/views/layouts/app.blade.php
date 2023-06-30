@@ -99,9 +99,9 @@
             @endcanany
             @canany(['is-admin', 'is-docteur'])
             <li>
-                <a href="{{ route('dossier_medical') }}" class="{{ setActive('dossier_medical') }} ">
+                <a href="{{ route('fiche_medicale') }}" class="{{ setActive('fiche_medicale') }} ">
                     <i class='bx bx-message'></i>
-                    <span class="links_name">Dossiers Medicals</span>
+                    <span class="links_name">Fiches Medicales</span>
                 </a>
             </li>
             @endcanany
@@ -122,7 +122,7 @@
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 <i class='bx bx-log-out'></i>
-                <span class="links_name">Log out</span>
+                <span class="links_name">Se Deconnecter</span>
             </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
