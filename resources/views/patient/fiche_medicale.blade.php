@@ -59,7 +59,7 @@
                     <td>{{ $item->groupe_sanguin }}</td>
                     <td>{{ $item->nationalite }}</td>
                     <td>
-                        <a href="{{ route('patient.show', $item) }}" class="btn-sm btn btn-primary" title="Modifier">
+                        <a href="{{ route('patient.show', $item) }}" class="btn-sm btn btn-primary" title="Voir Detail">
 
                             <i class="bi bi-eye"></i>
                         </a>

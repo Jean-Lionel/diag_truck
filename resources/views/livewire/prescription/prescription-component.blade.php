@@ -40,7 +40,11 @@
                 <td>{{ $item->groupe_sanguin }}</td>
                 <td>{{ $item->nationalite }}</td>
                 <td>
-                    <a href="{{ route('prescription.show', $item->id) }}">View détail</a>
+                    {{-- <a href="{{ route('prescription.show', $item->id) }}">View détail</a> --}}
+                    <a href="{{ route('prescription.show', $item->id) }}" class="btn-sm btn btn-primary" title="Voir Detail">
+
+                            <i class="bi bi-eye"></i>
+                        </a>
                 </td>
             </tr>
             @endforeach
