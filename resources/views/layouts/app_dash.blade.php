@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Responsiive Admin Dashboard | CodingLab </title>
+    <title> DIAGTRACK </title>
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -23,7 +23,7 @@
         <li>
           <a href="#" class="active">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">DIAGTRACK v1:06.2023</span>
+            <span class="links_name">Tableau de bord</span>
           </a>
         </li>
         <li>
@@ -93,7 +93,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Tableau De Bord</span>
+        <span class="dashboard">DIAGTRACK v1:06.2023</span>
       </div>
       <div class="search-box">
         <input type="text" placeholder="Recherche...">
