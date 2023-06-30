@@ -8,15 +8,20 @@ use App\Models\Assignation;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Carbon\Carbon;
 
 class AssignationController extends Controller
 {
     public function index(Request $request): View
     {
-        $assignations = Assignation::where('docteur_id',  auth()->user()->id)->latest()->get();
+        $assignations = Assignation::where('docteur_id',  auth()->user()->id)
+                            ->latest()
+                            ->whereDate('created_at', Carbon::today())
+                            ->get();
 
         if(auth()->user()->isAdmin() || auth()->user()->isInfirmier()){
-            $assignations = Assignation::latest()->get();
+            $assignations = Assignation::whereDate('created_at', Carbon::today()
+                    )->latest()->get();
 
         }
 
