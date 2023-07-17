@@ -12,19 +12,19 @@
             @include('shared.input', [
                 'class' => 'col-6',
                 'name' => 'first_name',
-                'label' => 'Prénom',
+                'label' => 'Prénom*',
                 'value' => $patient->first_name,
             ])
             @include('shared.input', [
                 'class' => 'col-6',
                 'name' => 'last_name',
-                'label' => 'Nom',
+                'label' => 'Nom*',
                 'value' => $patient->last_name,
             ])
             @include('shared.input', [
                 'class' => 'col-6',
                 'name' => 'birthday',
-                'label' => 'Date de naissance',
+                'label' => 'Date de naissance*',
                 'value' => $patient->birthday,
             ])
             @include('shared.input', [
@@ -49,7 +49,7 @@
 
              <div class="col-6">
                 <div class="form-group">
-                    <label for="">Groupe </label>
+                    <label for="">Groupe* </label>
                     <select name="groupe_sanguin" id="" class="form-control @error('sexe') is-invalid @enderror">
                         <option value=""></option>
                         <option value="O+" @if ($patient->sexe == 'O+') selected @endif>O <sup>+</sup></option>
@@ -82,7 +82,7 @@
             ])
             <div class="col-6">
                 <div class="form-group">
-                    <label for="">Sexe</label>
+                    <label for="">Sexe*</label>
                     <select name="sexe" id="" class="form-control @error('sexe') is-invalid @enderror">
                         <option value=""></option>
                         <option value="HOMME" @if ($patient->sexe == 'HOMME') selected @endif>HOMME</option>
