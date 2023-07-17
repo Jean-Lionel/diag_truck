@@ -50,8 +50,8 @@
                     <td>{{ $item->patient?->last_name }}</td>
                     <td>{{ $item->patient?->birthday }}</td>
                     <td>{{ $item->patient?->sexe }}</td>
-                    <th> {{ $item->infirmier?->name }}
-                        {{ $item->infirmier?->lastName }}
+                    <th> Dr {{ $item->infirmier?->name }}
+                        {{ $item->infirmier?->lastName }} 
                     </th>
                     <td>{{  $item->created_at}}</td>
                 </tr>

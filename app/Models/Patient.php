@@ -58,6 +58,6 @@ class Patient extends Model
         return $this->first_name . " ". $this->last_name;
     }
     public function getAgeAttribute(){
-        return Carbon::parse($this->birthday)->age . " years old";
+        return Carbon::parse($this->birthday)->age . " ans";
     }
 }

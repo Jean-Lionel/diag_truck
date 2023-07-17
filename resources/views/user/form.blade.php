@@ -85,8 +85,8 @@ $isUpdate ??= false;
 
             </div>
             <div class="col-md-6" id="show_infirmier">
-                <div class="row">
-                    <div class="col-6">
+                {{-- <div class="row"> --}}
+                    {{-- <div class="col-6"> --}}
                         <label for="">Groupe</label>
                         <select name="groupe" id="" class="form-control form-control-sm">
                             <option value=""></option>
@@ -96,23 +96,25 @@ $isUpdate ??= false;
                             <option value="GROUPE IV">GROUPE IV</option>
                             <option value="GROUPE V">GROUPE V</option>
                         </select>
-                    </div>
-                    <div class="col-6">
+                    {{-- </div> --}}
+                    {{-- <div class="col-6">
                         <label for="Qualification">Qualification</label>
                         <select name="qualification" id="Qualification" class="form-control form-control-sm">
                             <option value=""></option>
                             <option value="Infirmier Specialisé">Infirmier Specialisé</option>
                             <option value="Infirmier Généraliste">Infirmier Généraliste</option>
                         </select>
-                    </div>
-                </div>
+                    </div> --}}
+                {{-- </div> --}}
             </div>
             <div class="col-md-6" id="show_docteur">
                 <label for="">Specialité</label>
                 <select name="specialite" id="" class="form-control form-control-sm">
                     <option value=""></option>
                     <option value="Généraliste">Généraliste</option>
-                    <option value="Pédiatrie">Pédiatrie</option>
+                    <option value="Pédiatrie">Pédiatre</option>
+                    <option value="Pédiatrie">Cardilogue</option>
+                    <option value="Pédiatrie">Gynecologue</option>
                 </select>
 
             </div>

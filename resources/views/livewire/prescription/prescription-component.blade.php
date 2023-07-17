@@ -19,9 +19,9 @@
                         </th>
                         <th class="th-sm">Chef de Famille
                         </th>
-                        <th class="th-sm">Nationalité
-                        </th>
                         <th class="th-sm">Groupe sanguin
+                        </th>
+                        <th class="th-sm">Nationalité
                         </th>
                         <th class="th-sm">Action
                         </th>
