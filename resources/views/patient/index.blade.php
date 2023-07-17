@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="card-body">
-            <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <table id="datatable" class="table table-striped table-bordered overflow-auto" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th class="th-sm">#

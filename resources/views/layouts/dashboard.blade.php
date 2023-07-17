@@ -1,5 +1,15 @@
 {{-- @extends('layouts.app') --}}
 <style>
+    @media (max-width: 550px){
+         .top_cards{
+            
+        }
+        .card{
+            width:100% !important;
+            margin-top: 10px !important;
+
+        }
+    }
     .dashboard_container{
         margin:0px 20px;
     }
